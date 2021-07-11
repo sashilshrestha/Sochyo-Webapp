@@ -179,8 +179,8 @@ gulp.task("watch-bs", gulp.parallel("browser-sync", "watch"));
 gulp.task("scripts", function () {
 	var scripts = [
 		// Start - All Uikit stuff
-		// paths.dev + "/js/uikit/uikit.min.js",
-		// paths.dev + "/js/uikit/uikit-icons.min.js",
+		paths.dev + "/js/uikit/uikit.min.js",
+		paths.dev + "/js/uikit/uikit-icons.min.js",
 		paths.dev + "/js/themejs/*.js",
 
 		// End - All BS4 stuff
