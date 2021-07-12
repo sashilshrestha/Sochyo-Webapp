@@ -1,0 +1,63 @@
+/*Convertion Ration sp to rem for html */
+$conversionRatioSpToRemWeb: 1/16; //! 0.0625;
+$conversionRatioRemToPxWeb: 16;
+
+// Scales
+@function toRem($size) {
+    @return $size * $conversionRatioSpToRemWeb;
+}
+
+@function toPx($rems) {
+    @return $rems * $conversionRatioRemToPxWeb;
+}
+
+@mixin font-size($size) {
+    font-size: #{toRem($size)}rem;
+}
+
+@mixin line-height($size) {
+    line-height: #{toRem($size)}rem;
+}
+
+@mixin width($size) {
+    width: #{toRem($size)}rem;
+}
+
+@mixin height($size) {
+    height: #{toRem($size)}rem;
+}
+
+@mixin margin($m1, $m2, $m3, $m4) {
+    margin: #{toRem($m1)}rem #{toRem($m2)}rem #{toRem($m3)}rem #{toRem($m4)}rem;
+}
+
+@mixin padding($p1, $p2, $p3, $p4) {
+    padding: #{toRem($p1)}rem #{toRem($p2)}rem #{toRem($p3)}rem #{toRem($p4)}rem;
+}
+
+
+// @function spacing($tracking, $px) {
+//     @return $tracking / $px;
+// }
+
+// @mixin mat-typo($size, $spacing, $lineheight) {
+//     font-size: #{spToRem($size)}rem;
+//     letter-spacing: #{spacing($spacing, remToPx($size))}px;
+//     line-height: $lineheight;
+// }
+
+// Weights
+$w-thin: 100;
+$w-light: 300;
+$w-regular: 400;
+$w-medium: 500;
+$w-semibold: 600;
+$w-bold: 700;
+$w-black: 900;
+
+
+@mixin responsive($arg) {
+    @media screen and (max-width: #{$arg}px) {
+        @content;
+    }
+}
