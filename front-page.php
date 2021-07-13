@@ -119,7 +119,7 @@ get_header();
                                     </div>
                                     <div class="ss-content-holder">
                                         <h5>Pubg Mobile UC (Global)</h5>
-                                        <a href="">Rs. 1200</a>
+                                        <a href="" class="ss-product-price">Rs. 1200</a>
                                     </div>
                                 </div>
                             </div>

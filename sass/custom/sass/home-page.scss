@@ -302,14 +302,14 @@ main {
 											color: $white;
 											font-weight: 700;
 											margin: 0;
-											width: 72%;
+											width: 100%;
 										}
-										a {
+										.ss-product-price {
 											@include font-size(14);
 											color: $secondary;
 											font-weight: 700;
 											margin: 0;
-											width: 28%;
+											width: 8rem;
 											border: 2px solid $secondary;
 											box-sizing: border-box;
 											@include padding(5, 10, 5, 10);

@@ -44,11 +44,17 @@ if (!function_exists('understrap_woocommerce_wrapper_start')) {
 	function understrap_woocommerce_wrapper_start()
 	{
 		$container = get_theme_mod('understrap_container_type');
-		echo '<div class="wrapper uk-container uk-container-large" id="woocommerce-wrapper">';
+		echo '<div class="" id="woocommerce-wrapper">';
 		echo '<div class="' . esc_attr($container) . '" id="content" tabindex="-1">';
-		echo '<div class="row">';
-		get_template_part('global-templates/left-sidebar-check');
+		// get_template_part('global-templates/left-sidebar-check');
 		echo '<main class="site-main" id="main">';
+		echo '	<div class="ss-header-section">
+					<div class="ss-bg-overlay"></div>
+					<img src="../../../wp-content/themes/sochyo-theme/img/section-heading.png" alt="">
+				<div>
+				<div class="uk-container uk-container-large">
+				
+				';
 	}
 }
 
@@ -58,10 +64,10 @@ if (!function_exists('understrap_woocommerce_wrapper_end')) {
 	 */
 	function understrap_woocommerce_wrapper_end()
 	{
-		echo '</main><!-- #main -->';
-		get_template_part('global-templates/right-sidebar-check');
-		echo '</div><!-- .row -->';
-		echo '</div><!-- Container end -->';
+		echo '</div><!-- #uk-container -->';
+		echo '</div><!-- #main -->';
+		// get_template_part('global-templates/right-sidebar-check');
+		echo '</div><!-- content end -->';
 		echo '</div><!-- Wrapper end -->';
 	}
 }
