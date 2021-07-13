@@ -88,7 +88,6 @@ get_header();
                             <?php
                             }
                             ?>
-
                         </ul>
 
                     </div>
@@ -100,6 +99,42 @@ get_header();
         </div>
     </section>
     <!-- Popular Categories Ended -->
+
+    <section class="ss-featured-products" id="section-padding">
+        <div class="uk-container uk-container-large">
+            <div class="ss-heading-title">
+                <h2>Featured Products</h2>
+            </div>
+            <div class="ss-cards-container">
+                <div class="uk-grid uk-grid-small uk-child-width-1-1 uk-child-width-1-4@m">
+                    <?php
+                    for ($i = 1; $i < 9; $i++) {
+                    ?>
+                        <div class="ss-card-contain">
+                            <div class="ss-card">
+                                <img src="wp-content/themes/sochyo-theme/img/landing-<?php echo $i ?>.jpg" alt="" class="ss-img-overlay">
+                                <div class="ss-card-info">
+                                    <div class="ss-img-holder">
+                                        <img src="wp-content/themes/sochyo-theme/img/pubg.png" alt="">
+                                    </div>
+                                    <div class="ss-content-holder">
+                                        <h5>Pubg Mobile UC (Global)</h5>
+                                        <a href="">Rs. 1200</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ss-button">
+                                <a href="">Add to Cart</a>
+                            </div>
+                        </div>
+                    <?php
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Products Ended -->
 </main>
 
 <?php
