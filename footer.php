@@ -15,9 +15,9 @@ defined('ABSPATH') || exit;
 ?>
 <?php get_template_part('sidebar-templates/sidebar', 'footerfull'); ?>
 
-<center>
+<!-- <center>
 	<h5 class="uk-text-bolder uk-background-muted uk-padding-small" style="margin-top: 2rem;">Sochyo.com.np</h5>
-</center>
+</center> -->
 
 
 </div><!-- #page we need this extra closing tag here -->
