@@ -1,37 +1,48 @@
 body {
-    font-size: 16px;
-    overflow-x: hidden;
-    font-family: 'Poppins';
+	font-size: 16px;
+	overflow-x: hidden;
+	font-family: "Mark Pro";
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-    margin: 0 !important;    
+	// margin: 0 !important;
+	color: $grey;
 }
 
 .uk-container-xlarge {
-    max-width: 1740px;
-    width: 100%;
+	max-width: 1740px;
+	width: 100%;
 }
 
 .uk-container-large {
-    max-width: 1484px;
-    width: 100%;
+	// max-width: 1484px;
+	width: 1400px;
 }
 
 .uk-container-medium {
-    max-width: 1125px;
-    width: 100%;
+	max-width: 1125px;
+	width: 100%;
 }
 
 .uk-container-small {
-    max-width: 1090px;
-    width: 100%;
+	max-width: 1090px;
+	width: 100%;
 }
 
 .uk-container-xsmall {
-    max-width: 968px;
-    width: 100%;
+	max-width: 968px;
+	width: 100%;
+}
+
+#section-padding {
+	padding: 6.25rem 0;
+}
+
+a {
+	&:hover {
+		text-decoration: none;
+	}
 }
