@@ -71,7 +71,7 @@ get_header();
             <div class="ss-cards-container">
                 <div uk-slider>
                     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
-                        <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-4@m uk-grid-small">
+                        <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-4@m uk-grid-small">
                             <?php
                             for ($i = 1; $i < 6; $i++) {
                             ?>

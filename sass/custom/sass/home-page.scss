@@ -29,7 +29,7 @@ main {
 								left: 50%;
 								position: absolute;
 								transform: translate(-50%, -50%);
-								width: max-content;
+								width: 100%;
 								max-width: 100%;
 								box-sizing: border-box;
 
@@ -118,7 +118,6 @@ main {
 
 		&.ss-popular-categories {
 			.uk-container {
-				position: relative;
 				.ss-heading-title {
 					@include margin(0, 0, 53, 0);
 
@@ -142,7 +141,6 @@ main {
 				.ss-cards-container {
 					.uk-slider {
 						.uk-position-relative {
-							// position: initial !important;
 							ul.uk-slider-items {
 								li {
 									@include height(222);
@@ -152,6 +150,7 @@ main {
 										position: relative;
 
 										img {
+											width: 100%;
 											height: 100%;
 											object-fit: cover;
 											border-radius: #{toRem(15)}rem;
@@ -187,12 +186,7 @@ main {
 											}
 
 											&:hover {
-												background: rgb(0, 131, 253);
-												background: linear-gradient(
-													90deg,
-													rgba(0, 0, 0, 0.7) 0%,
-													rgba(0, 131, 253, 0.4) 100%
-												);
+												backdrop-filter: grayscale(10) blur(2px);
 												h3 {
 													color: $secondary;
 													border-bottom: 0.3rem solid $secondary;
@@ -202,40 +196,6 @@ main {
 									}
 								}
 							}
-							// .ss-left-right {
-							// 	position: absolute;
-							// 	top: 0;
-							// 	width: 100%;
-							// 	height: 100%;
-							// 	left: 0;
-							// 	box-sizing: border-box;
-
-							// 	a.uk-slidenav {
-							// 		position: absolute;
-							// 		bottom: 0;
-							// 		color: $primary;
-							// 		background-color: rgba($secondary, 0.6);
-							// 		border-radius: 100%;
-							// 		@include padding(10, 10, 10, 10);
-							// 		transition: all 0.2s ease-in-out;
-
-							// 		svg {
-							// 			@include width(10);
-							// 			@include height(10);
-							// 		}
-							// 		&.uk-slidenav-previous {
-							// 			right: #{toRem(40)}rem;
-							// 		}
-							// 		&.uk-slidenav-next {
-							// 			right: #{toRem(0)}rem;
-							// 		}
-
-							// 		&:hover {
-							// 			background-color: rgba($secondary, 1);
-							// 			transform: scale(1.2);
-							// 		}
-							// 	}
-							// }
 						}
 						ul.uk-slider-nav {
 							@include margin(40, 0, 0, 0);
