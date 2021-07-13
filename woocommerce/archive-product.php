@@ -59,14 +59,21 @@ if (woocommerce_product_loop()) {
 	do_action('woocommerce_before_shop_loop');
 
 	woocommerce_product_loop_start();
-?><div class="uk-grid uk-grid-small uk-child-width-1-1 uk-child-width-1-4@m"><?php
-																				if (wc_get_loop_prop('total')) {
-																					while (have_posts()) {
-																						the_post();
+?><div class="uk-grid uk-grid-small uk-child-width-1-1 uk-child-width-1-4@m">
+		<?php
+		if (wc_get_loop_prop('total')) {
+			while (have_posts()) {
+				the_post();
 
-																						$thumb_id = get_post_thumbnail_id();
-																						$thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
-																				?>
+				$thumb_id = get_post_thumbnail_id();
+				$thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+
+				global $post;
+				$product = new WC_Product($post->ID);
+				$regularprice = $product->get_price_html();
+
+				
+		?>
 				<div class="ss-card-contain">
 					<div class="ss-card">
 						<img src="<?php echo $thumb_url[0] ?>" alt="" class="ss-img-overlay">
@@ -78,23 +85,23 @@ if (woocommerce_product_loop()) {
 								<a href="<?php the_permalink(); ?>">
 									<h5><?php the_title(); ?></h5>
 								</a>
-								<a href="" class="ss-product-price">Rs. 1200</a>
+								<a href="" class="ss-product-price"><?php echo $regularprice; ?></a>
+
 							</div>
 						</div>
 					</div>
 					<div class="ss-button">
-						<a href="">Add to Cart</a>
+						<a href="?add-to-cart=<?php echo $post->ID;?>">Add to Cart</a>
 					</div>
 				</div>
 		<?php
-																						// /**
-																						//  * Hook: woocommerce_shop_loop.
-																						//  */
-																						// do_action('woocommerce_shop_loop');
-
-																						// wc_get_template_part('content', 'product');
-																					}
-																				}
+				/**
+				 * Hook: woocommerce_shop_loop.
+				 */
+				// do_action('woocommerce_shop_loop');
+				// wc_get_template_part('content', 'product');
+			}
+		}
 		?>
 	</div><?php
 
