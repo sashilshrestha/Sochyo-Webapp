@@ -36,6 +36,7 @@ header.ss-navbar {
 							font-weight: 500;
 							text-transform: uppercase;
 							@include margin(0, 0, 0, 36);
+							@include padding(0, 0, 3, 0);
 
 							@include set(992) {
 								@include font-size(25);
@@ -95,13 +96,14 @@ header.ss-navbar {
 						transition: all 0.4s ease-in-out;
 						margin-top: 0;
 						margin-left: 0;
-						background: rgb(56, 50, 95);
+						background: rgb(0, 131, 253);
 						background: linear-gradient(
 							90deg,
-							rgba(3, 85, 192, 0.95) 0%,
-							rgba(22, 90, 149, 0.95) 100%
+							rgba(0, 131, 253, 0.6) 0%,
+							rgba(0, 131, 253, 0.8) 100%
 						);
-						// right: 0;
+						backdrop-filter: blur(5px);
+						box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
 						transform: translateX(-100%);
 					}
 				}
@@ -211,6 +213,8 @@ header.ss-navbar {
 		rgba(0, 131, 253, 0.8) 100%
 	);
 	backdrop-filter: blur(5px);
+	box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+
 	.uk-container {
 		height: 5rem;
 	}
