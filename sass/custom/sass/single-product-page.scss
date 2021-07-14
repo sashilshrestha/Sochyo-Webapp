@@ -1,0 +1,122 @@
+.single.single-product {
+	.ss-header-section {
+		@include height(859);
+		position: relative;
+
+		.ss-bg-overlay {
+			background-image: url("../img/section-overlay.png");
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-size: cover;
+		}
+
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		.uk-container {
+			margin-top: -40rem;
+			z-index: 1;
+			position: relative;
+
+			.woocommerce-breadcrumb {
+				@include font-size(19);
+				@include margin(0, 0, 15, 0);
+				color: $white;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				.ss-breadcrumb {
+					color: $white;
+				}
+			}
+			.product {
+				.woocommerce-product-gallery {
+					.woocommerce-product-gallery__image {
+						@include height(697);
+						border-radius: #{toRem(25.47)}rem;
+
+						a {
+							.wp-post-image {
+								height: 100%;
+								// border-radius: #{toRem(25.47)}rem;
+							}
+						}
+						img.zoomImg {
+							// border-radius: #{toRem(25.47)}rem;
+						}
+					}
+				}
+				.summary.entry-summary {
+					.woocommerce-product-details__short-description {
+						color: $light;
+						@include font-size(28);
+						font-weight: 300;
+					}
+
+					form {
+						margin: 0;
+						.quantity {
+							input.qty {
+								font-size: 1.18rem;
+								padding: 0.618em 1em 0.618em 1.9rem;
+								width: 2rem;
+								box-sizing: content-box;
+								text-align: center;
+								border-radius: #{toRem(3)}rem;
+								border-color: transparent;
+
+								&:focus-visible {
+									outline: none;
+								}
+							}
+						}
+						.single_add_to_cart_button {
+							background-color: $secondary;
+							@include font-size(23);
+							font-weight: 700;
+							text-transform: uppercase;
+							box-shadow: 0px 4px 6px 0px rgba($secondary, 0.3);
+						}
+					}
+
+					.product_meta {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	// Woocommerce Customization
+	&.woocommerce div.product .product_title {
+		@include font-size(52);
+		font-weight: 800;
+		color: $white;
+	}
+	&.woocommerce div.product p.price,
+	&.woocommerce div.product span.price {
+		color: $white;
+		@include font-size(42);
+		font-family: "Mark Pro";
+		font-weight: 900;
+	}
+}
+
+.woocommerce #content div.product div.images,
+.woocommerce div.product div.images,
+.woocommerce-page #content div.product div.images,
+.woocommerce-page div.product div.images {
+	width: 42%;
+}
+
+.woocommerce #content div.product div.summary,
+.woocommerce div.product div.summary,
+.woocommerce-page #content div.product div.summary,
+.woocommerce-page div.product div.summary {
+	width: 55%;
+}

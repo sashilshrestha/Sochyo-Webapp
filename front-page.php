@@ -100,7 +100,7 @@ get_header();
     </section>
     <!-- Popular Categories Ended -->
 
-    <section class="ss-featured-products" id="section-padding">
+    <section class="ss-featured-products" id="section-padding-bottom">
         <div class="uk-container uk-container-large">
             <div class="ss-heading-title">
                 <h2>Featured Products</h2>

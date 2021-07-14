@@ -44,16 +44,16 @@ if (!function_exists('understrap_woocommerce_wrapper_start')) {
 	function understrap_woocommerce_wrapper_start()
 	{
 		$container = get_theme_mod('understrap_container_type');
+		$my_url = get_home_url();
 		echo '<div class="" id="woocommerce-wrapper">';
 		echo '<div class="' . esc_attr($container) . '" id="content" tabindex="-1">';
 		// get_template_part('global-templates/left-sidebar-check');
 		echo '<main class="site-main" id="main">';
-		echo '	<div class="ss-header-section">
-					<div class="ss-bg-overlay"></div>
-					<img src="../../../wp-content/themes/sochyo-theme/img/section-heading.png" alt="">
+		echo '<div class="ss-header-section">
+					<div class="ss-bg-overlay"></div> 
+					<img src=" '. $my_url .' /wp-content/themes/sochyo-theme/img/landing-3.jpg" alt="">
 				<div>
-				<div class="uk-container uk-container-large">
-				
+				<div class="uk-container uk-container-large">				
 				';
 	}
 }

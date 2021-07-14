@@ -1,149 +1,152 @@
-.ss-header-section {
-	@include height(340);
-	position: relative;
-
-	.ss-bg-overlay {
-		background-image: url("../img/section-overlay.png");
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		background-size: cover;
-	}
-
-	img {
-		height: 100%;
-		width: 100%;
-		object-fit: cover;
-	}
-
-	.uk-container {
-		margin-top: -8rem;
-		z-index: 1;
+.archive {
+	.ss-header-section {
+		@include height(340);
 		position: relative;
 
-		.woocommerce-breadcrumb {
-			@include font-size(19);
-			@include margin(0, 0, 15, 0);
-			color: $white;
-			text-transform: uppercase;
-			.ss-breadcrumb {
+		.ss-bg-overlay {
+			background-image: url("../img/section-overlay.png");
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-size: cover;
+		}
+
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		.uk-container {
+			margin-top: -8rem;
+			z-index: 1;
+			position: relative;
+
+			.woocommerce-breadcrumb {
+				@include font-size(19);
+				@include margin(0, 0, 15, 0);
 				color: $white;
-			}
-		}
-		.woocommerce-products-header {
-			.woocommerce-products-header__title.page-title {
-				@include font-size(48);
-				font-weight: 800;
-				color: $secondary;
-				margin-bottom: 5rem;
-			}
-		}
-		.products {
-			.ss-card-contain {
-				@include margin(0, 0, 52, 0);
-
-				.ss-card {
-					@include margin(0, 0, 22, 0);
-					background: rgb(0, 0, 0);
-					background: linear-gradient(
-						0deg,
-						rgba(0, 0, 0, 0.9) 0%,
-						rgba(0, 0, 0, 0.15449929971988796) 100%
-					);
-					border-radius: #{toRem(15)}rem;
-					position: relative;
-					@include height(276);
-					@include padding(13, 23, 13, 23);
-					box-sizing: border-box;
-					display: flex;
-					flex-direction: column;
-					justify-content: flex-end;
-					overflow: hidden;
-					transition: all 0.2s ease-in-out;
-
-					.ss-img-overlay {
-						position: absolute;
-						top: 0;
-						left: 0;
-						width: 100%;
-						height: 100%;
-						border-radius: #{toRem(15)}rem;
-						object-fit: cover;
-						z-index: -1;
-					}
-
-					.ss-card-info {
-						z-index: 1;
-
-						.ss-img-holder {
-							@include width(70);
-							@include height(70);
-							border-radius: #{toRem(15)}rem;
-							@include margin(0, 0, 10, 0);
-
-							img {
-								width: 100%;
-								height: 100%;
-								object-fit: cover;
-								border-radius: #{toRem(15)}rem;
-								box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 1);
-							}
-						}
-						.ss-content-holder {
-							display: flex;
-							justify-content: space-between;
-							align-items: center;
-
-							h5 {
-								@include font-size(18);
-								color: $white;
-								font-weight: 700;
-								margin: 0;
-								width: 100%;
-							}
-							.ss-product-price {
-								@include font-size(14);
-								color: $secondary;
-								font-weight: 700;
-								margin: 0;
-								width: 8rem;
-								border: 2px solid $secondary;
-								box-sizing: border-box;
-								@include padding(5, 10, 5, 10);
-								border-radius: #{toRem(3.73)}rem;
-								display: flex;
-								justify-content: center;
-								align-items: center;
-								height: fit-content;
-							}
-						}
-					}
-
-					&:hover {
-						img {
-							transform: scale(0.9);
-						}
-						.ss-img-overlay {
-							transform: scale(1.12);
-						}
-					}
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				.ss-breadcrumb {
+					color: $white;
 				}
+			}
+			.woocommerce-products-header {
+				.woocommerce-products-header__title.page-title {
+					@include font-size(48);
+					font-weight: 800;
+					color: $secondary;
+					margin-bottom: 5rem;
+				}
+			}
+			.products {
+				.ss-card-contain {
+					@include margin(0, 0, 52, 0);
 
-				.ss-button {
-					a {
-						background-color: $secondary;
-						color: $white;
-						@include padding(12, 10, 12, 10);
-						@include font-size(17);
-						font-weight: 700;
-						box-shadow: 0px 4px 6px 0px rgba($secondary, 0.5);
-						border-radius: #{toRem(5.95)}rem;
+					.ss-card {
+						@include margin(0, 0, 22, 0);
+						background: rgb(0, 0, 0);
+						background: linear-gradient(
+							0deg,
+							rgba(0, 0, 0, 0.9) 0%,
+							rgba(0, 0, 0, 0.15449929971988796) 100%
+						);
+						border-radius: #{toRem(15)}rem;
+						position: relative;
+						@include height(276);
+						@include padding(13, 23, 13, 23);
+						box-sizing: border-box;
+						display: flex;
+						flex-direction: column;
+						justify-content: flex-end;
+						overflow: hidden;
 						transition: all 0.2s ease-in-out;
 
+						.ss-img-overlay {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							border-radius: #{toRem(15)}rem;
+							object-fit: cover;
+							z-index: -1;
+						}
+
+						.ss-card-info {
+							z-index: 1;
+
+							.ss-img-holder {
+								@include width(70);
+								@include height(70);
+								border-radius: #{toRem(15)}rem;
+								@include margin(0, 0, 10, 0);
+
+								img {
+									width: 100%;
+									height: 100%;
+									object-fit: cover;
+									border-radius: #{toRem(15)}rem;
+									box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 1);
+								}
+							}
+							.ss-content-holder {
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+
+								h5 {
+									@include font-size(18);
+									color: $white;
+									font-weight: 700;
+									margin: 0;
+									width: 100%;
+								}
+								.ss-product-price {
+									@include font-size(14);
+									color: $secondary;
+									font-weight: 700;
+									margin: 0;
+									width: 8rem;
+									border: 2px solid $secondary;
+									box-sizing: border-box;
+									@include padding(5, 10, 5, 10);
+									border-radius: #{toRem(3.73)}rem;
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									height: fit-content;
+								}
+							}
+						}
+
 						&:hover {
-							box-shadow: none;
+							img {
+								transform: scale(0.9);
+							}
+							.ss-img-overlay {
+								transform: scale(1.12);
+							}
+						}
+					}
+
+					.ss-button {
+						a {
+							background-color: $secondary;
+							color: $white;
+							@include padding(12, 10, 12, 10);
+							@include font-size(17);
+							font-weight: 700;
+							box-shadow: 0px 4px 6px 0px rgba($secondary, 0.5);
+							border-radius: #{toRem(5.95)}rem;
+							transition: all 0.2s ease-in-out;
+
+							&:hover {
+								box-shadow: none;
+							}
 						}
 					}
 				}
