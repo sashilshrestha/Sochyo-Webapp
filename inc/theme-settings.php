@@ -45,3 +45,4 @@ if ( ! function_exists( 'understrap_get_theme_default_settings' ) ) {
 		return apply_filters( 'understrap_theme_default_settings', $defaults );
 	}
 }
+

@@ -44,4 +44,17 @@ foreach ($understrap_includes as $file) {
 	require_once get_theme_file_path($understrap_inc_dir . $file);
 }
 
+// Custom Function Starts Now
+
 remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
+
+
+// ----------------------------- Add link class in wp_nav_menu -----------------------------
+function add_menu_link_class($atts, $item, $args)
+{
+	if (property_exists($args, 'link_class')) {
+		$atts['class'] = $args->link_class;
+	}
+	return $atts;
+}
+add_filter('nav_menu_link_attributes', 'add_menu_link_class', 1, 3);

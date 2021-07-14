@@ -28,7 +28,7 @@ $container = get_theme_mod('understrap_container_type');
 	<div class="site" id="page">
 
 		<?php
-		if (!is_front_page()) {
-			// include('navigation.php');
-		}
+		// if (!is_front_page()) {
+			include('navigation.php');
+		// }
 		?>

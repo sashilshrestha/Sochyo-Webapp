@@ -68,6 +68,8 @@ body {
 	.woocommerce-info,
 	.woocommerce-message {
 		border-top: 6px solid $secondary;
+		background-color: #ffe8a396;
+		color: #404040;
 	}
 
 	.woocommerce-message::before {
@@ -93,4 +95,13 @@ body {
 .woocommerce input.button:hover {
 	background-color: rgba($secondary, 0.8);
 	color: $white;
+}
+
+.custom-logo {
+	@include set(992) {
+		@include padding(40, 0, 0, 40);
+		box-sizing: content-box;
+		position: relative;
+		z-index: 1000;
+	}
 }
