@@ -329,6 +329,13 @@ main {
 									.ss-img-overlay {
 										transform: scale(1.12);
 									}
+									.ss-card-info {
+										.ss-content-holder {
+											h5 {
+												color: $secondary;
+											}
+										}
+									}
 								}
 							}
 
