@@ -9,7 +9,7 @@ get_header();
     <section class="ss-landing-section">
         <div uk-slider>
             <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
-                <ul class="uk-slider-items uk-child-width-1-1">
+                <ul class="uk-slider-items uk-child-width-1-1 uk-grid">
                     <?php
                     for ($i = 1; $i < 5; $i++) {
                     ?>
