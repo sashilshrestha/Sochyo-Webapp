@@ -58,3 +58,28 @@ function add_menu_link_class($atts, $item, $args)
 	return $atts;
 }
 add_filter('nav_menu_link_attributes', 'add_menu_link_class', 1, 3);
+
+//  Remove all possible fields for checkout option
+function wc_remove_checkout_fields($fields)
+{
+
+	// Billing fields
+	unset($fields['billing']['billing_company']);
+	unset($fields['billing']['billing_address_2']);
+	unset($fields['billing']['billing_state']);
+	unset($fields['billing']['billing_postcode']);
+
+	// Shipping fields
+	unset($fields['shipping']['shipping_company']);
+	unset($fields['shipping']['shipping_phone']);
+	unset($fields['shipping']['shipping_state']);
+	unset($fields['shipping']['shipping_first_name']);
+	unset($fields['shipping']['shipping_last_name']);
+	unset($fields['shipping']['shipping_address_1']);
+	unset($fields['shipping']['shipping_address_2']);
+	unset($fields['shipping']['shipping_city']);
+	unset($fields['shipping']['shipping_postcode']);
+
+	return $fields;
+}
+add_filter('woocommerce_checkout_fields', 'wc_remove_checkout_fields');

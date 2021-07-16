@@ -88,7 +88,7 @@ get_header();
                 <h2>Featured Products</h2>
             </div>
             <div class="ss-cards-container">
-                <div class="uk-grid uk-grid-small uk-child-width-1-1 uk-child-width-1-4@m" uk-scrollspy="cls: uk-animation-slide-top-small; delay: 400; repeat: true; target: .ss-card-contain;">
+                <div class="uk-grid uk-grid-small uk-child-width-1-1 uk-child-width-1-4@m" uk-scrollspy="cls: uk-animation-slide-top-small; delay: 400; repeat: false; target: .ss-card-contain;">
                     <?php
                     $args = array(
                         'post_type' => 'product',
@@ -123,9 +123,9 @@ get_header();
                                     </div>
                                 </div>
                             </div>
-                            <div class="ss-button">
+                            <!-- <div class="ss-button">
                                 <a href="?add-to-cart=<?php echo $post->ID; ?>">Add to Cart</a>
-                            </div>
+                            </div> -->
                         </div>
                     <?php
                     endwhile;

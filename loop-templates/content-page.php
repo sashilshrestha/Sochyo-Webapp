@@ -13,7 +13,7 @@ defined('ABSPATH') || exit;
 <article id="post-<?php the_ID(); ?>" class="uk-container uk-container-large">
 
 	<header class="entry-header">
-		Demo
+
 		<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 
 	</header><!-- .entry-header -->

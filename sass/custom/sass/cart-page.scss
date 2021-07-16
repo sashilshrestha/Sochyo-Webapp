@@ -1,0 +1,74 @@
+.page {
+	.ss-header-section {
+		@include height(340);
+		position: relative;
+
+		.ss-bg-overlay {
+			background-image: url("../img/section-overlay.png");
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-size: cover;
+		}
+
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	main {
+		margin-top: -5rem;
+		z-index: 1;
+		position: relative;
+
+		article {
+			header {
+				h1.entry-title {
+					font-size: 3rem;
+					font-weight: 800;
+					color: #ffa000;
+					margin-bottom: 5rem;
+				}
+			}
+			.entry-content {
+				.woocommerce {
+					display: flex;
+					justify-content: space-between;
+					flex-wrap: wrap;
+
+					.woocommerce-notices-wrapper {
+						display: none;
+					}
+					.woocommerce-cart-form {
+						width: 70%;
+						padding-right: 2rem;
+						box-sizing: border-box;
+					}
+					.cart-collaterals {
+						width: 30%;
+
+						&::before {
+							display: none;
+						}
+						&::after {
+							display: none;
+						}
+
+						.cart_totals {
+							width: 100%;
+
+							.wc-proceed-to-checkout {
+								a.checkout-button {
+									background-color: $secondary;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
