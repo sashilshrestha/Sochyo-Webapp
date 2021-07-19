@@ -26,12 +26,10 @@ get_header();
                     <?php
                     }
                     ?>
-
                 </ul>
                 <a class="" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                 <a class="" href="#" uk-slidenav-next uk-slider-item="next"></a>
             </div>
-
             <ul class="uk-slider-nav uk-dotnav uk-flex-center"></ul>
         </div>
     </section>
@@ -50,7 +48,7 @@ get_header();
                         $terms = get_terms($taxonomy); // Get all terms of a taxonomy
                         if ($terms && !is_wp_error($terms)) :
                         ?>
-                            <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-4@m uk-grid-small" uk-scrollspy="cls: uk-animation-fade; delay: 400; repeat: false; target: li;">
+                            <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-4@m uk-child-width-1-2@s uk-grid-small" uk-scrollspy="cls: uk-animation-fade; delay: 400; repeat: false; target: li;">
                                 <?php foreach ($terms as $term) {
                                     $term_cat_id = $term->term_id;
                                     $thumbnail_id = get_woocommerce_term_meta($term_cat_id, 'thumbnail_id', true);
@@ -88,7 +86,7 @@ get_header();
                 <h2>Featured Products</h2>
             </div>
             <div class="ss-cards-container">
-                <div class="uk-grid uk-grid-small uk-child-width-1-1 uk-child-width-1-4@m" uk-scrollspy="cls: uk-animation-slide-top-small; delay: 400; repeat: false; target: .ss-card-contain;">
+                <div class="uk-grid uk-grid-small uk-child-width-1-1 uk-child-width-1-4@m uk-child-width-1-2@s" uk-scrollspy="cls: uk-animation-slide-top-small; delay: 400; repeat: false; target: .ss-card-contain;">
                     <?php
                     $args = array(
                         'post_type' => 'product',
@@ -123,9 +121,9 @@ get_header();
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="ss-button">
+                            <div class="ss-button">
                                 <a href="?add-to-cart=<?php echo $post->ID; ?>">Add to Cart</a>
-                            </div> -->
+                            </div>
                         </div>
                     <?php
                     endwhile;

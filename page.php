@@ -21,7 +21,7 @@ $container = get_theme_mod('understrap_container_type');
 ?>
 <div class="ss-header-section">
 	<div class="ss-bg-overlay"></div>
-	<img src="<?php echo get_home_url(); ?>/wp-content/themes/sochyo-theme/img/landing-3.jpg" alt="">
+	<img src="<?php echo get_home_url(); ?>/wp-content/themes/sochyo-theme/img/game-header.jpg" alt="">
 </div>
 
 <!-- Do the left sidebar check -->

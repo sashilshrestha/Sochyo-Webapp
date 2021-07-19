@@ -51,7 +51,7 @@ if (!function_exists('understrap_woocommerce_wrapper_start')) {
 		echo '<main class="site-main" id="main">';
 		echo '<div class="ss-header-section">
 					<div class="ss-bg-overlay"></div> 
-					<img src=" '. $my_url .' /wp-content/themes/sochyo-theme/img/landing-3.jpg" alt="">
+					<img src=" ' . $my_url . ' /wp-content/themes/sochyo-theme/img/game-header.jpg" alt="">
 				<div>
 				<div class="uk-container uk-container-large">				
 				';

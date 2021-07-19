@@ -46,6 +46,46 @@
 						width: 70%;
 						padding-right: 2rem;
 						box-sizing: border-box;
+
+						.shop_table {
+							thead {
+								tr {
+									background: $secondary;
+									color: $white;
+								}
+							}
+							tbody {
+								tr.cart_item {
+									.product-remove {
+										a {
+											width: 100%;
+										}
+									}
+									.product-thumbnail {
+										a {
+											img {
+												@include width(104);
+												@include height(80);
+												object-fit: cover;
+												object-position: top;
+												border-radius: #{toRem(4)}rem;
+											}
+										}
+									}
+								}
+								tr {
+									td.actions {
+										.coupon {
+											input#coupon_code {
+												border-radius: #{toRem(4)}rem !important;
+												@include padding(8, 6, 8, 6);
+												margin-right: 0.5rem;
+											}
+										}
+									}
+								}
+							}
+						}
 					}
 					.cart-collaterals {
 						width: 30%;
@@ -70,5 +110,23 @@
 				}
 			}
 		}
+	}
+}
+
+.woocommerce .woocommerce-ordering select {
+	padding: 0.5rem 0.6rem;
+	outline: none;
+}
+
+.woocommerce .woocommerce-ordering {
+	margin-bottom: 2rem;
+
+	&::focus-visible {
+		outline: none;
+	}
+
+	select {
+		// border: 1px solid $secondary;
+		border-radius: #{toRem(6)}rem;
 	}
 }
