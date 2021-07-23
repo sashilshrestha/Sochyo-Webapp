@@ -67,6 +67,15 @@ header.ss-navbar {
 									background: white;
 								}
 							}
+
+							&.uk-icon {
+								font-size: 0;
+								&:hover {
+									&:after {
+										display: none;
+									}
+								}
+							}
 						}
 
 						&.wpmenucart-contents {
@@ -240,4 +249,10 @@ header.ss-navbar {
 	.uk-container {
 		height: 5rem;
 	}
+}
+
+.account {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

@@ -32,6 +32,7 @@ get_header();
             </div>
             <ul class="uk-slider-nav uk-dotnav uk-flex-center"></ul>
         </div>
+
     </section>
     <!-- Landing Section Ended -->
 

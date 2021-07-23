@@ -29,6 +29,6 @@ $container = get_theme_mod('understrap_container_type');
 
 		<?php
 		// if (!is_front_page()) {
-			include('navigation.php');
+		include('navigation.php');
 		// }
 		?>

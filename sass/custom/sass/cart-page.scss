@@ -58,7 +58,11 @@
 								tr.cart_item {
 									.product-remove {
 										a {
-											width: 100%;
+											font-size: 1.4rem;
+											padding: 0.2rem 0.2rem;
+											height: 1.4rem;
+											width: 1.4rem;
+											border: 1px solid;
 										}
 									}
 									.product-thumbnail {
@@ -103,7 +107,12 @@
 							.wc-proceed-to-checkout {
 								a.checkout-button {
 									background-color: $secondary;
+									padding: 0.8rem;
 								}
+							}
+
+							h2 {
+								font-weight: 700;
 							}
 						}
 					}
@@ -129,4 +138,83 @@
 		// border: 1px solid $secondary;
 		border-radius: #{toRem(6)}rem;
 	}
+}
+
+.woocommerce a.remove {
+}
+
+.woocommerce-form-coupon-toggle {
+	display: none;
+}
+
+#order_review_heading {
+	display: none;
+}
+
+form.checkout.woocommerce-checkout {
+	display: flex;
+}
+
+form.checkout.woocommerce-checkout .col2-set {
+	display: flex;
+	flex-direction: column;
+}
+
+.woocommerce .col2-set .col-1,
+.woocommerce-page .col2-set .col-1 {
+	float: left;
+	width: 100%;
+	padding-right: 2rem;
+	box-sizing: border-box;
+}
+
+#add_payment_method #payment ul.payment_methods li,
+.woocommerce-cart #payment ul.payment_methods li,
+.woocommerce-checkout #payment ul.payment_methods li {
+	padding: 0.8rem 0;
+}
+
+#add_payment_method #payment,
+.woocommerce-cart #payment,
+.woocommerce-checkout #payment {
+	background: #fbfbfb;
+	border-radius: #{toRem(15)}rem;
+}
+
+#add_payment_method #payment div.payment_box,
+.woocommerce-cart #payment div.payment_box,
+.woocommerce-checkout #payment div.payment_box {
+	background-color: #328bdb;
+	color: $white;
+}
+
+#add_payment_method #payment div.payment_box::before,
+.woocommerce-cart #payment div.payment_box::before,
+.woocommerce-checkout #payment div.payment_box::before {
+	border: 1em solid #328bdb;
+	border-right-color: transparent;
+	border-left-color: transparent;
+	border-top-color: transparent;
+}
+
+.woocommerce-input-wrapper input,
+.woocommerce-input-wrapper select,
+.woocommerce-input-wrapper textarea {
+	border-radius: #{toRem(10)}rem;
+	background-color: #328bdb0f;
+	border: none;
+	padding: 1rem;
+	margin-bottom: 0.4rem;
+}
+
+.woocommerce .col2-set .col-2,
+.woocommerce-page .col2-set .col-2 {
+	float: left;
+	width: 100%;
+	padding-right: 2rem;
+	box-sizing: border-box;
+}
+
+.woocommerce form .form-row textarea {
+	height: 10rem;
 }

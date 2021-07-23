@@ -62,12 +62,12 @@ add_filter('nav_menu_link_attributes', 'add_menu_link_class', 1, 3);
 //  Remove all possible fields for checkout option
 function wc_remove_checkout_fields($fields)
 {
-
 	// Billing fields
 	unset($fields['billing']['billing_company']);
 	unset($fields['billing']['billing_address_2']);
 	unset($fields['billing']['billing_state']);
 	unset($fields['billing']['billing_postcode']);
+	unset($fields['billing']['billing_country']);
 
 	// Shipping fields
 	unset($fields['shipping']['shipping_company']);
@@ -83,3 +83,18 @@ function wc_remove_checkout_fields($fields)
 	return $fields;
 }
 add_filter('woocommerce_checkout_fields', 'wc_remove_checkout_fields');
+
+// For the User Icon in account page jugad
+
+add_filter('nav_menu_link_attributes', 'wpse121123_contact_menu_atts', 10, 3);
+function wpse121123_contact_menu_atts($atts, $item, $args)
+{
+	// The ID of the target menu item
+	$menu_target = 78;
+
+	// inspect $item
+	if ($item->ID == $menu_target) {
+		$atts['uk-icon'] = 'user';
+	}
+	return $atts;
+}
