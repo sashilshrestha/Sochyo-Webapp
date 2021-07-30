@@ -11,7 +11,7 @@ get_header();
             <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
                 <ul class="uk-slider-items uk-child-width-1-1 uk-grid">
                     <?php
-                    for ($i = 1; $i < 5; $i++) {
+                    for ($i = 1; $i < 2; $i++) {
                     ?>
                         <li>
                             <div class="ss-bg-overlay"></div>

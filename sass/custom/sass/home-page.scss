@@ -33,35 +33,48 @@ main {
 								max-width: 100%;
 								box-sizing: border-box;
 
-								h1 {
-									@include font-size(101);
-									@include line-height(101);
-									@include width(835);
-									font-weight: 900;
-									@include margin(0, 0, 60, 0);
+								.uk-container {
+									h1 {
+										@include font-size(101);
+										@include line-height(101);
+										@include width(835);
+										font-weight: 900;
+										@include margin(0, 0, 60, 0);
 
-									span {
-										color: $secondary;
+										span {
+											color: $secondary;
+										}
+
+										@include set(768) {
+											width: 100%;
+										}
+										@include set(555) {
+											font-size: 5.3125rem;
+										}
 									}
-								}
-								a.ss-button {
-									position: absolute;
-									@include font-size(23);
-									@include line-height(23);
-									@include padding(22, 38, 22, 38);
-									background-color: $secondary;
-									border-radius: #{toRem(15)}rem;
-									box-shadow: 0px 5px 13px 0px rgba(255, 160, 0, 0.5);
-									transition: all 0.2s ease-in-out;
+									a.ss-button {
+										position: absolute;
+										@include font-size(23);
+										@include line-height(23);
+										@include padding(22, 38, 22, 38);
+										background-color: $secondary;
+										border-radius: #{toRem(15)}rem;
+										box-shadow: 0px 5px 13px 0px rgba(255, 160, 0, 0.5);
+										transition: all 0.2s ease-in-out;
 
-									&:hover {
-										transform: translateY(-0.3125rem);
-										text-decoration: none;
-										box-shadow: none;
+										&:hover {
+											transform: translateY(-0.3125rem);
+											text-decoration: none;
+											box-shadow: none;
+										}
+
+										&:focus {
+											outline: none;
+										}
 									}
 
-									&:focus {
-										outline: none;
+									@include set(768) {
+										width: 82%;
 									}
 								}
 							}

@@ -75,6 +75,16 @@ header.ss-navbar {
 										display: none;
 									}
 								}
+
+								svg {
+									width: #{toRem(20)}rem;
+									height: #{toRem(20)}rem;
+
+									@include set(768) {
+										width: 2.25rem;
+										height: 2.25rem;
+									}
+								}
 							}
 						}
 
@@ -97,6 +107,14 @@ header.ss-navbar {
 								position: absolute;
 								@include padding(2, 5, 2, 5);
 								border-radius: #{toRem(4)}rem;
+
+								@include set(768) {
+									font-size: 1rem;
+								}
+							}
+
+							@include set(768) {
+								font-size: 2rem;
 							}
 						}
 					}
@@ -111,6 +129,17 @@ header.ss-navbar {
 			}
 
 			.ss-logo {
+				a {
+					img {
+						height: #{toRem(50)}rem;
+						width: 100%;
+						object-fit: contain;
+						// padding: 0;
+						@include set(991) {
+							padding: 0rem 0 0 1.5rem;
+						}
+					}
+				}
 			}
 
 			@include set(992) {
@@ -121,7 +150,7 @@ header.ss-navbar {
 				&.mobile {
 					@include set(992) {
 						position: absolute;
-						top: 0;
+						top: #{toRem(-30)}rem;
 						width: 26rem;
 						text-align: center;
 						transition: all 0.4s ease-in-out;
@@ -149,7 +178,7 @@ header.ss-navbar {
 				padding-right: 3.5rem;
 
 				.fr-burger {
-					min-height: 26px;
+					min-height: #{toRem(32)}rem;
 
 					@include height(26);
 					@include width(40);
@@ -191,7 +220,7 @@ header.ss-navbar {
 			padding: 0;
 			margin: 0;
 			width: 100%;
-			height: auto;
+			// height: auto;
 		}
 	}
 }
@@ -240,19 +269,19 @@ header.ss-navbar {
 	background: rgb(0, 131, 253);
 	background: linear-gradient(
 		90deg,
-		rgba(0, 131, 253, 0.6) 0%,
-		rgba(0, 131, 253, 0.8) 100%
+		rgba(0, 131, 253, 0.8) 0%,
+		rgba(0, 131, 253, 1) 100%
 	);
-	backdrop-filter: blur(5px);
+	// backdrop-filter: blur(5px);
 	box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
 
 	.uk-container {
-		height: 5rem;
+		// height: 5rem;
 	}
 }
 
 .account {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 }

@@ -5,7 +5,7 @@
 	font-family: "Mark Pro Regular";
 	font-style: normal;
 	font-weight: normal;
-	src: local("Mark Pro Regular"), url("../../fonts/MARKPRO.woff") format("woff");
+	src: local("Mark Pro Regular"), url("../fonts/MARKPRO.woff") format("woff");
 }
 
 @font-face {
@@ -13,7 +13,7 @@
 	font-style: normal;
 	font-weight: normal;
 	src: local("Mark Pro Extra Light"),
-		url("../../fonts/MARKPROEXTRALIGHT.woff") format("woff");
+		url("../fonts/MARKPROEXTRALIGHT.woff") format("woff");
 }
 
 @font-face {
@@ -21,7 +21,7 @@
 	font-style: normal;
 	font-weight: normal;
 	src: local("Mark Pro Light"),
-		url("../../fonts/MARKPROLIGHT.woff") format("woff");
+		url("../fonts/MARKPROLIGHT.woff") format("woff");
 }
 
 @font-face {
@@ -29,7 +29,7 @@
 	font-style: normal;
 	font-weight: normal;
 	src: local("Mark Pro Book"),
-		url("../../fonts/MARKPROBOOK.woff") format("woff");
+		url("../fonts/MARKPROBOOK.woff") format("woff");
 }
 
 @font-face {
@@ -37,7 +37,7 @@
 	font-style: normal;
 	font-weight: normal;
 	src: local("Mark Pro Medium"),
-		url("../../fonts/MARKPROMEDIUM.woff") format("woff");
+		url("../fonts/MARKPROMEDIUM.woff") format("woff");
 }
 
 @font-face {
@@ -45,7 +45,7 @@
 	font-style: normal;
 	font-weight: normal;
 	src: local("Mark Pro Bold"),
-		url("../../fonts/MARKPROBOLD.woff") format("woff");
+		url("../fonts/MARKPROBOLD.woff") format("woff");
 }
 
 @font-face {
@@ -53,7 +53,7 @@
 	font-style: normal;
 	font-weight: normal;
 	src: local("Mark Pro Heavy"),
-		url("../../fonts/MARKPROHEAVY.woff") format("woff");
+		url("../fonts/MARKPROHEAVY.woff") format("woff");
 }
 
 @font-face {
@@ -61,5 +61,5 @@
 	font-style: normal;
 	font-weight: 900;
 	src: local("Mark Pro Black"),
-		url("../../fonts/MARKPROBLACK.woff") format("woff");
+		url("../fonts/MARKPROBLACK.woff") format("woff");
 }
