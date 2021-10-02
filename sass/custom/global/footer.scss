@@ -1,0 +1,70 @@
+footer {
+	background: #343a40;
+	@include padding(40, 0, 0, 0);
+
+	.ss-footer-top {
+		.container {
+			&.left {
+				.ss-logo {
+					img {
+						@include margin(0, 0, 10, 0);
+					}
+				}
+				.ss-info {
+					p {
+						@include margin(15, 0, 15, 0);
+						color: $white;
+
+						span {
+							@include margin(0, 8, 0, 0);
+						}
+					}
+				}
+			}
+			&.middle {
+				h3 {
+					color: $white;
+				}
+				.ss-ewallet {
+					img {
+						@include width(100);
+						@include margin(0, 20, 0, 0);
+					}
+				}
+			}
+			&.right {
+				h3 {
+					color: $white;
+				}
+				.ss-icons {
+					a {
+						span {
+							border: 1px solid $white;
+							@include padding(10, 10, 10, 10);
+							border-radius: 50%;
+							@include margin(0, 10, 0, 0);
+
+							svg {
+								color: $white;
+							}
+
+							&:hover {
+								background: $white;
+
+								svg {
+									color: #343a40;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.ss-footer-bottom {
+		display: flex;
+		justify-content: space-between;
+		@include padding(10, 0, 10, 0);
+	}
+}
