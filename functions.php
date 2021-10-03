@@ -98,3 +98,6 @@ function wpse121123_contact_menu_atts($atts, $item, $args)
 	}
 	return $atts;
 }
+
+// Remove the product description Title
+add_filter('woocommerce_product_description_heading', '__return_null');

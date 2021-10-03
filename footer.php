@@ -18,7 +18,7 @@ defined('ABSPATH') || exit;
 
 </div><!-- #page we need this extra closing tag here -->
 
-<footer>
+<footer class="global-footer">
 	<div class="uk-container uk-container-large ss-footer-top">
 		<div class="uk-child-width-expand@s" uk-grid>
 			<div>

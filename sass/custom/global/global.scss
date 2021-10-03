@@ -115,6 +115,12 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+	margin-bottom: 5rem !important;
+	border-radius: 20px !important;
+	padding: 7rem 0 !important;
+	border: none !important;
+	box-shadow: 0px 5px 20px #00000029 !important;
 
 	input {
 		border-radius: 0.625rem;
@@ -130,4 +136,8 @@ body {
 			flex-direction: column;
 		}
 	}
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+	padding: 0 0 0 0.4rem;
 }

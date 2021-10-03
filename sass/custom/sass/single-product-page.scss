@@ -1,12 +1,11 @@
 .single.single-product {
 	.ss-header-section {
-		@include height(859);
 		position: relative;
 
 		.ss-bg-overlay {
 			background-image: url("../img/section-overlay.png");
 			width: 100%;
-			height: 100%;
+			@include height(859);
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -14,7 +13,7 @@
 		}
 
 		img {
-			height: 100%;
+			@include height(859);
 			width: 100%;
 			object-fit: cover;
 		}

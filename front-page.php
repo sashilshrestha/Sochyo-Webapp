@@ -15,7 +15,12 @@ get_header();
                     ?>
                         <li>
                             <div class="ss-bg-overlay"></div>
-                            <img src="wp-content/themes/sochyo-theme/img/landing-<?php echo $i; ?>.jpg" alt="">
+                            <!-- <img src="wp-content/themes/sochyo-theme/img/vid.mp4" alt=""> -->
+                            <!-- <video width="100%" height="100%" id="videoLoading" src="wp-content/themes/sochyo-theme/img/vid.mp4" preload="auto" webkit-playsinline="true" playsinline="false" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="false" muted="" x5-video-orientation="landscape">
+                            </video> -->
+                            <video autoplay muted loop id="myVideo" width="100%" height="100%">
+                                <source src="wp-content/themes/sochyo-theme/img/vid5.mp4" type="video/mp4">
+                            </video>
                             <div class="ss-landing-info uk-panel">
                                 <div class="uk-container uk-container-large">
                                     <h1>Not Just a Sale It’s Much <span>Bigger !</span></h1>
@@ -42,14 +47,14 @@ get_header();
                 <h2>Popular Products</h2>
             </div>
             <div class="ss-cards-container">
-                <div uk-slider="finite: true; autoplay: true; autoplay-interval: 1000; pause-on-hover: true">
+                <div uk-slider="finite: true; pause-on-hover: true">
                     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
                         <?php
                         $taxonomy = 'product_cat';
                         $terms = get_terms($taxonomy); // Get all terms of a taxonomy
                         if ($terms && !is_wp_error($terms)) :
                         ?>
-                            <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-4@m uk-child-width-1-2@s uk-grid-small" uk-scrollspy="cls: uk-animation-fade; delay: 400; repeat: false; target: li;">
+                            <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-4@m uk-child-width-1-2@s uk-grid-small">
                                 <?php foreach ($terms as $term) {
                                     $term_cat_id = $term->term_id;
                                     $thumbnail_id = get_woocommerce_term_meta($term_cat_id, 'thumbnail_id', true);
@@ -68,9 +73,7 @@ get_header();
                                 <?php } ?>
                             </ul>
                         <?php endif; ?>
-
                     </div>
-
                     <ul class="uk-slider-nav uk-dotnav uk-flex-center"></ul>
                 </div>
                 <?php
@@ -87,7 +90,7 @@ get_header();
                 <h2>Featured Products</h2>
             </div>
             <div class="ss-cards-container">
-                <div class="uk-grid uk-grid-small uk-child-width-1-1 uk-child-width-1-4@m uk-child-width-1-2@s" uk-scrollspy="cls: uk-animation-slide-top-small; delay: 400; repeat: false; target: .ss-card-contain;">
+                <div class="uk-grid uk-grid-small uk-child-width-1-1 uk-child-width-1-4@m uk-child-width-1-2@s">
                     <?php
                     $args = array(
                         'post_type' => 'product',
@@ -112,7 +115,7 @@ get_header();
                                 <img src="<?php echo $thumb_url[0] ?>" alt="" class="ss-img-overlay">
                                 <div class="ss-card-info">
                                     <div class="ss-img-holder">
-                                        <img src="<?php echo $thumb_url[0] ?>" alt="">
+                                        <img src="<?php echo get_field('product_thumbnail') ?>" alt="">
                                     </div>
                                     <div class="ss-content-holder">
                                         <a href="<?php the_permalink(); ?>">

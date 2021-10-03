@@ -1,6 +1,7 @@
-footer {
-	background: #343a40;
+footer.global-footer {
+	background: #202331;
 	@include padding(40, 0, 0, 0);
+	@include margin(40, 0, 0, 0);
 
 	.ss-footer-top {
 		.container {
@@ -52,7 +53,7 @@ footer {
 								background: $white;
 
 								svg {
-									color: #343a40;
+									color: #202331;
 								}
 							}
 						}
@@ -66,5 +67,8 @@ footer {
 		display: flex;
 		justify-content: space-between;
 		@include padding(10, 0, 10, 0);
+		border-top: 1px solid #fff;
+		color: $white;
+		margin-top: 2rem;
 	}
 }
