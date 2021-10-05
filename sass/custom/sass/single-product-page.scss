@@ -62,7 +62,7 @@
 						.quantity {
 							input.qty {
 								font-size: 1.18rem;
-								padding: 0.618em 1em 0.618em 1.9rem;
+								padding: 0.28em 1em 0.28em 1.9rem;
 								width: 2rem;
 								box-sizing: content-box;
 								text-align: center;
@@ -76,7 +76,7 @@
 						}
 						.single_add_to_cart_button {
 							background-color: $secondary;
-							@include font-size(23);
+							@include font-size(18);
 							font-weight: 700;
 							text-transform: uppercase;
 							box-shadow: 0px 4px 6px 0px rgba($secondary, 0.3);
@@ -100,7 +100,7 @@
 	&.woocommerce div.product p.price,
 	&.woocommerce div.product span.price {
 		color: $white;
-		@include font-size(42);
+		@include font-size(32);
 		font-family: "Mark Pro";
 		font-weight: 900;
 	}
@@ -118,4 +118,22 @@
 .woocommerce-page #content div.product div.summary,
 .woocommerce-page div.product div.summary {
 	width: 55%;
+}
+
+.woocommerce div.product form.cart .reset_variations {
+	@include font-size(20);
+	color: white;
+	border: 1px dashed;
+	padding: 0.5rem 1rem;
+	border-radius: #{toRem(8)}rem;
+}
+
+.woocommerce div.product form.cart .variations select {
+	@include font-size(20);
+	padding: 0.5rem;
+	min-width: 50%;
+	border: none;
+	outline: none;
+	border-radius: #{toRem(8)}rem;
+	box-shadow: 0px 5px 20px #00000029;
 }

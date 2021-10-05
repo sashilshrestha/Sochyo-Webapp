@@ -2,64 +2,57 @@
 	font-family: "Mark Pro" !important;
 }
 @font-face {
-	font-family: "Mark Pro Regular";
+	font-family: "Mark Pro";
 	font-style: normal;
-	font-weight: normal;
-	src: local("Mark Pro Regular"), url("../fonts/MARKPRO.woff") format("woff");
+	font-weight: 400;
+	src: local(""), url("../fonts/MARKPRO.woff") format("woff");
 }
 
 @font-face {
-	font-family: "Mark Pro Extra Light";
+	font-family: "Mark Pro";
 	font-style: normal;
-	font-weight: normal;
-	src: local("Mark Pro Extra Light"),
-		url("../fonts/MARKPROEXTRALIGHT.woff") format("woff");
+	font-weight: 200;
+	src: local(""), url("../fonts/MARKPROEXTRALIGHT.woff") format("woff");
 }
 
 @font-face {
-	font-family: "Mark Pro Light";
+	font-family: "Mark Pro";
 	font-style: normal;
-	font-weight: normal;
-	src: local("Mark Pro Light"),
-		url("../fonts/MARKPROLIGHT.woff") format("woff");
+	font-weight: 300;
+	src: local(""), url("../fonts/MARKPROLIGHT.woff") format("woff");
 }
 
 @font-face {
-	font-family: "Mark Pro Book";
+	font-family: "Mark Pro";
 	font-style: normal;
-	font-weight: normal;
-	src: local("Mark Pro Book"),
-		url("../fonts/MARKPROBOOK.woff") format("woff");
+	font-weight: 500;
+	src: local(""), url("../fonts/MARKPROBOOK.woff") format("woff");
 }
 
 @font-face {
-	font-family: "Mark Pro Medium";
+	font-family: "Mark Pro";
 	font-style: normal;
-	font-weight: normal;
-	src: local("Mark Pro Medium"),
-		url("../fonts/MARKPROMEDIUM.woff") format("woff");
+	font-weight: 600;
+	src: local(""), url("../fonts/MARKPROMEDIUM.woff") format("woff");
 }
 
 @font-face {
-	font-family: "Mark Pro Bold";
+	font-family: "Mark Pro";
 	font-style: normal;
-	font-weight: normal;
-	src: local("Mark Pro Bold"),
-		url("../fonts/MARKPROBOLD.woff") format("woff");
+	font-weight: 700;
+	src: local(""), url("../fonts/MARKPROBOLD.woff") format("woff");
 }
 
 @font-face {
-	font-family: "Mark Pro Heavy";
+	font-family: "Mark Pro";
 	font-style: normal;
-	font-weight: normal;
-	src: local("Mark Pro Heavy"),
-		url("../fonts/MARKPROHEAVY.woff") format("woff");
+	font-weight: 800;
+	src: local(""), url("../fonts/MARKPROHEAVY.woff") format("woff");
 }
 
 @font-face {
-	font-family: "Mark Pro Black";
+	font-family: "Mark Pro";
 	font-style: normal;
 	font-weight: 900;
-	src: local("Mark Pro Black"),
-		url("../fonts/MARKPROBLACK.woff") format("woff");
+	src: local(""), url("../fonts/MARKPROBLACK.woff") format("woff");
 }

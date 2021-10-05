@@ -101,12 +101,13 @@ header.ss-navbar {
 
 							.cartcontents {
 								width: max-content;
-								background-color: $secondary;
+								background-color: transparent;
 								color: #fff;
-								font-size: 0.5rem;
+								font-size: 0px;
 								position: absolute;
 								@include padding(2, 5, 2, 5);
 								border-radius: #{toRem(4)}rem;
+								visibility: hidden;
 
 								@include set(768) {
 									font-size: 1rem;

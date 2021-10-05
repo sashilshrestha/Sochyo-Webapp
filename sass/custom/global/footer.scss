@@ -1,5 +1,5 @@
 footer.global-footer {
-	background: #202331;
+	background: #1f2020;
 	@include padding(40, 0, 0, 0);
 	@include margin(40, 0, 0, 0);
 
@@ -14,7 +14,7 @@ footer.global-footer {
 				.ss-info {
 					p {
 						@include margin(15, 0, 15, 0);
-						color: $white;
+						color: #b1b1b1;
 
 						span {
 							@include margin(0, 8, 0, 0);
@@ -25,32 +25,35 @@ footer.global-footer {
 			&.middle {
 				h3 {
 					color: $white;
+					font-weight: 600;
 				}
 				.ss-ewallet {
 					img {
-						@include width(100);
-						@include margin(0, 20, 0, 0);
+						margin: 0 1.25rem 0 0;
+						object-fit: cover;
+						height: 4rem;
 					}
 				}
 			}
 			&.right {
 				h3 {
 					color: $white;
+					font-weight: 600;
 				}
 				.ss-icons {
 					a {
 						span {
-							border: 1px solid $white;
+							border: 1px solid #b1b1b1;
 							@include padding(10, 10, 10, 10);
 							border-radius: 50%;
 							@include margin(0, 10, 0, 0);
 
 							svg {
-								color: $white;
+								color: #b1b1b1;
 							}
 
 							&:hover {
-								background: $white;
+								background: #b1b1b1;
 
 								svg {
 									color: #202331;
@@ -66,9 +69,9 @@ footer.global-footer {
 	.ss-footer-bottom {
 		display: flex;
 		justify-content: space-between;
-		@include padding(10, 0, 10, 0);
-		border-top: 1px solid #fff;
-		color: $white;
+		@include padding(20, 0, 20, 0);
+		border-top: 1px solid rgb(71, 71, 71);
+		color: #b1b1b1;
 		margin-top: 2rem;
 	}
 }

@@ -63,6 +63,9 @@
 											height: 1.4rem;
 											width: 1.4rem;
 											border: 1px solid;
+											display: flex;
+											justify-content: center;
+											align-items: center;
 										}
 									}
 									.product-thumbnail {
@@ -177,7 +180,8 @@ form.checkout.woocommerce-checkout .col2-set {
 #add_payment_method #payment,
 .woocommerce-cart #payment,
 .woocommerce-checkout #payment {
-	background: #fbfbfb;
+	// background: #fbfbfb;
+	background: #fff;
 	border-radius: #{toRem(15)}rem;
 }
 

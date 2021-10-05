@@ -7186,4 +7186,15 @@
   }
 
   $(window).resize(resize).trigger("resize");
+  $(document).ready(function () {
+    let item = $(".cartcontents").text();
+
+    if (item !== "0 items") {
+      $(".cartcontents").css({
+        visibility: "visible",
+        "font-size": "0.5rem",
+        background: "#ffa000"
+      });
+    }
+  });
 })(jQuery);

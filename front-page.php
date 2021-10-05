@@ -15,12 +15,11 @@ get_header();
                     ?>
                         <li>
                             <div class="ss-bg-overlay"></div>
-                            <!-- <img src="wp-content/themes/sochyo-theme/img/vid.mp4" alt=""> -->
-                            <!-- <video width="100%" height="100%" id="videoLoading" src="wp-content/themes/sochyo-theme/img/vid.mp4" preload="auto" webkit-playsinline="true" playsinline="false" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="false" muted="" x5-video-orientation="landscape">
-                            </video> -->
-                            <video autoplay muted loop id="myVideo" width="100%" height="100%">
+                            <img src="wp-content/themes/sochyo-theme/img/landing-9.jpg" alt="">
+
+                            <!-- <video autoplay muted loop id="myVideo" width="100%" height="100%">
                                 <source src="wp-content/themes/sochyo-theme/img/vid5.mp4" type="video/mp4">
-                            </video>
+                            </video> -->
                             <div class="ss-landing-info uk-panel">
                                 <div class="uk-container uk-container-large">
                                     <h1>Not Just a Sale It’s Much <span>Bigger !</span></h1>
