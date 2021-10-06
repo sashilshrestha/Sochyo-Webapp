@@ -45,6 +45,10 @@
 					justify-content: space-between;
 					flex-wrap: wrap;
 
+					@include set(555) {
+						flex-direction: column;
+					}
+
 					.woocommerce-notices-wrapper {
 						display: none;
 					}

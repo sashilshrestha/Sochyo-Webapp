@@ -92,9 +92,15 @@ body {
 .woocommerce-page .woocommerce-info .button,
 .woocommerce-page .woocommerce-message .button {
 	color: $white;
-	background-color: $secondary;
+	background: linear-gradient(270deg, $secondary 10%, $yellow 90%);
 	transition: all 0.2s ease-in-out;
 	text-decoration: uppercase;
+
+	@include set(460) {
+		width: fit-content;
+		height: 100%;
+		white-space: nowrap;
+	}
 }
 
 .woocommerce #respond input#submit:hover,
@@ -288,4 +294,21 @@ a:hover {
 	-moz-border-radius: 0.9375rem;
 	border-radius: 0.9375rem;
 	box-shadow: 0 6px 20px #0000000d;
+}
+
+.woocommerce-message::before {
+	@include set(460) {
+		display: none;
+	}
+}
+
+body .woocommerce-error,
+body .woocommerce-info,
+body .woocommerce-message {
+	@include set(460) {
+		padding: 1.2rem;
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+	}
 }
