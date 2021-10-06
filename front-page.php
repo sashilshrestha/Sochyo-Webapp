@@ -43,7 +43,7 @@ get_header();
     <section class="ss-popular-categories" id="section-padding">
         <div class="uk-container uk-container-large">
             <div class="ss-heading-title">
-                <h2>Popular Products</h2>
+                <h2>Popular Category</h2>
             </div>
             <div class="ss-cards-container">
                 <div uk-slider="finite: true; pause-on-hover: true">
@@ -126,6 +126,7 @@ get_header();
                             </div>
                             <div class="ss-button">
                                 <a href="?add-to-cart=<?php echo $post->ID; ?>">Add to Cart</a>
+                                <a href="<?php the_permalink(); ?>" class="ss-details-btn">View Details</a>
                             </div>
                         </div>
                     <?php

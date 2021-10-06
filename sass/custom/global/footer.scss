@@ -26,6 +26,18 @@ footer.global-footer {
 				h3 {
 					color: $white;
 					font-weight: 600;
+					position: relative;
+					padding: 0 0 0 1.2rem;
+
+					&::before {
+						content: "";
+						position: absolute;
+						height: 100%;
+						width: 0.325rem;
+						top: 0;
+						left: 0;
+						background-color: #ffa000;
+					}
 				}
 				.ss-ewallet {
 					img {
@@ -39,21 +51,33 @@ footer.global-footer {
 				h3 {
 					color: $white;
 					font-weight: 600;
+					position: relative;
+					padding: 0 0 0 1.2rem;
+
+					&::before {
+						content: "";
+						position: absolute;
+						height: 100%;
+						width: 0.325rem;
+						top: 0;
+						left: 0;
+						background-color: #ffa000;
+					}
 				}
 				.ss-icons {
 					a {
 						span {
-							border: 1px solid #b1b1b1;
+							border: 1px solid $white;
 							@include padding(10, 10, 10, 10);
 							border-radius: 50%;
 							@include margin(0, 10, 0, 0);
 
 							svg {
-								color: #b1b1b1;
+								color: $white;
 							}
 
 							&:hover {
-								background: #b1b1b1;
+								background: $white;
 
 								svg {
 									color: #202331;

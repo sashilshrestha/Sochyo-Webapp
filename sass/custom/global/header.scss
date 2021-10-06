@@ -32,8 +32,8 @@ header.ss-navbar {
 							color: white;
 							@include font-size(16);
 							position: relative;
-							transition: all 0.3s ease-in-out;
-							font-weight: 500;
+							transition: all 0.2s ease;
+							font-weight: 700;
 							text-transform: uppercase;
 							@include margin(0, 0, 0, 36);
 							@include padding(0, 0, 3, 0);
@@ -55,7 +55,14 @@ header.ss-navbar {
 
 							&:hover {
 								text-decoration: none;
-								color: rgb(233, 232, 232);
+								// color: rgb(233, 232, 232);
+								background: linear-gradient(
+									270deg,
+									$secondary 10%,
+									$yellow 90%
+								);
+								-webkit-background-clip: text;
+								-webkit-text-fill-color: transparent;
 
 								&:after {
 									content: "";
@@ -64,7 +71,11 @@ header.ss-navbar {
 									left: 0;
 									width: 100%;
 									height: 1px;
-									background: white;
+									background: linear-gradient(
+										270deg,
+										$secondary 10%,
+										$yellow 90%
+									);
 								}
 							}
 
