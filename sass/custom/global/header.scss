@@ -146,9 +146,17 @@ header.ss-navbar {
 						height: #{toRem(50)}rem;
 						width: 100%;
 						object-fit: contain;
-						// padding: 0;
+
 						@include set(991) {
 							padding: 0rem 0 0 1.5rem;
+						}
+
+						@include set(768) {
+							padding: 0rem 0 0 2rem;
+						}
+
+						@include set(460) {
+							padding: 0rem 0 0 1rem;
 						}
 					}
 				}
@@ -189,6 +197,10 @@ header.ss-navbar {
 				float: right;
 				padding-right: 3.5rem;
 
+				@include set(460) {
+					padding-right: 2rem;
+				}
+
 				.fr-burger {
 					min-height: #{toRem(32)}rem;
 
@@ -201,13 +213,14 @@ header.ss-navbar {
 
 					@include set(555) {
 						justify-content: space-evenly;
+						height: 3.2rem;
 					}
 
 					span {
 						display: block;
 						background: rgb(255, 255, 255);
 						width: 100%;
-						height: 2px;
+						@include height(4);
 
 						&:first-child {
 							transform-origin: center center;
@@ -242,13 +255,18 @@ header.ss-navbar {
 		.uk-container {
 			.ss-right {
 				display: block;
+
 				.fr-burger {
 					justify-content: center;
 					span {
 						&:first-child {
-							top: 0%;
+							top: #{toRem(3)}rem;
 							transform: rotate(45deg);
 							position: relative;
+
+							@include set(555) {
+								top: 0;
+							}
 						}
 						&:nth-child(2) {
 							background: transparent;
@@ -292,7 +310,8 @@ header.ss-navbar {
 	}
 }
 
-.account {
+.account,
+#wpmenucartli {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;

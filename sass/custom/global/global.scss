@@ -49,6 +49,10 @@ h5 {
 }
 #section-padding {
 	padding: 6.25rem 0;
+
+	@include set(460) {
+		padding: 3.25rem 0;
+	}
 }
 
 a {

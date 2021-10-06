@@ -72,7 +72,7 @@ if (woocommerce_product_loop()) {
 				$product = new WC_Product($post->ID);
 				$regularprice = $product->get_price_html();
 
-				
+
 		?>
 				<div class="ss-card-contain">
 					<div class="ss-card">
@@ -91,7 +91,8 @@ if (woocommerce_product_loop()) {
 						</div>
 					</div>
 					<div class="ss-button">
-						<a href="?add-to-cart=<?php echo $post->ID;?>">Add to Cart</a>
+						<a href="?add-to-cart=<?php echo $post->ID; ?>">Add to Cart</a>
+						<a href="<?php the_permalink(); ?>" class="ss-details-btn">View Details</a>
 					</div>
 				</div>
 		<?php

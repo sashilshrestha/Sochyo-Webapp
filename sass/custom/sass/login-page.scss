@@ -4,6 +4,11 @@
 	box-shadow: 0px 5px 31px 0px rgba(224, 224, 224, 0.4);
 	border-radius: 1.5rem;
 
+	@include set(768) {
+		flex-direction: column;
+		border-radius: 1.8rem;
+	}
+
 	.u-column1,
 	.u-column2 {
 		padding: 3.5rem 0.8rem 0.5rem;
@@ -12,13 +17,19 @@
 			font-weight: 700;
 			color: $secondary;
 			text-align: center;
+
+			@include set(460) {
+				font-size: 4rem;
+			}
 		}
 
 		form {
-			// box-shadow: 0px 5px 31px 0px rgba(224, 224, 224, 0.4);
 			border: none;
-			// border-radius: 1rem;
 			margin: 0;
+
+			@include set(460) {
+				padding: 0 1rem;
+			}
 
 			p {
 				margin: 0.8rem 0 !important;
@@ -36,6 +47,13 @@
 
 			label {
 				font-size: 1rem;
+
+				@include set(460) {
+					font-size: 1.5rem;
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+				}
 			}
 		}
 	}
@@ -52,6 +70,10 @@
 		background-size: cover;
 		background-position: center center;
 
+		@include set(768) {
+			border-radius: 1.8rem;
+		}
+
 		h2 {
 			color: $white;
 		}
@@ -67,5 +89,35 @@
 		.show-password-input::after {
 			color: #585858;
 		}
+	}
+
+	.u-column2 {
+		margin-top: 5rem;
+	}
+}
+
+label.woocommerce-form__label.woocommerce-form__label-for-checkbox.woocommerce-form-login__rememberme {
+	@include set(460) {
+		margin-bottom: 1rem;
+	}
+}
+
+.woocommerce-LostPassword.lost_password a {
+	color: $white;
+}
+
+.woocommerce form .form-row-first,
+.woocommerce form .form-row-last,
+.woocommerce-page form .form-row-first,
+.woocommerce-page form .form-row-last {
+	@include set(460) {
+		width: 100%;
+		float: none;
+	}
+}
+
+#customer_login form.woocommerce-form.woocommerce-form-register.register {
+	@include set(460) {
+		padding: 0;
 	}
 }

@@ -3,6 +3,10 @@
 		// @include height(340);
 		position: relative;
 
+		@include set(460) {
+			height: 21.5rem;
+		}
+
 		.ss-bg-overlay {
 			background-image: url("../img/section-overlay.png");
 			width: 100%;
@@ -29,8 +33,10 @@
 				h1.entry-title {
 					font-size: 3rem;
 					font-weight: 800;
-					color: #ffa000;
 					margin-bottom: 5rem;
+					background: linear-gradient(360deg, $secondary 10%, $yellow 90%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
 				}
 			}
 			.entry-content {

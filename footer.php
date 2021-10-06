@@ -41,7 +41,7 @@ defined('ABSPATH') || exit;
 					<h3>Pay Via</h3>
 					<div class="ss-ewallet">
 						<img src="./wp-content/themes/sochyo-theme/img/khalti.png" alt="">
-						<img src="./wp-content/themes/sochyo-theme/img/ime.png" alt="">
+						<img src="./wp-content/themes/sochyo-theme/img/ime.jfif" alt="">
 						<img src="./wp-content/themes/sochyo-theme/img/esewa.jpg" alt="">
 					</div>
 				</div>

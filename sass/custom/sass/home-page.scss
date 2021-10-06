@@ -8,6 +8,11 @@ main {
 					ul.uk-slider-items {
 						li {
 							height: 100vh;
+
+							@include set(460) {
+								height: 60vh;
+							}
+
 							.ss-bg-overlay {
 								background-image: url("../img/Overlay.png");
 								width: 100%;
@@ -41,6 +46,17 @@ main {
 										font-weight: 900;
 										@include margin(0, 0, 20, 0);
 
+										@include set(768) {
+											width: 100%;
+										}
+										@include set(555) {
+											font-size: 5.3125rem;
+										}
+										@include set(460) {
+											font-size: 4.2rem;
+											line-height: 105%;
+										}
+
 										span {
 											background: linear-gradient(
 												270deg,
@@ -50,26 +66,18 @@ main {
 											-webkit-background-clip: text;
 											-webkit-text-fill-color: transparent;
 										}
-
-										@include set(768) {
-											width: 100%;
-										}
-										@include set(555) {
-											font-size: 5.3125rem;
-										}
 									}
 									a.ss-button {
 										position: absolute;
 										@include font-size(23);
 										@include line-height(23);
 										@include padding(18, 32, 18, 32);
-										// background-color: $secondary;
 										background: linear-gradient(
 											270deg,
 											$secondary 10%,
 											$yellow 90%
 										);
-										border-radius: #{toRem(15)}rem;
+										border-radius: #{toRem(8)}rem;
 										box-shadow: 0px 5px 13px 0px rgba(255, 160, 0, 0.5);
 										transition: all 0.2s ease-in-out;
 										font-weight: 800;
@@ -87,6 +95,10 @@ main {
 
 									@include set(768) {
 										width: 82%;
+									}
+
+									@include set(460) {
+										width: 78%;
 									}
 								}
 							}
@@ -161,14 +173,29 @@ main {
 							left: 0;
 							background-color: $secondary;
 						}
+
+						@include set(460) {
+							font-size: 3rem;
+						}
 					}
 				}
 				.ss-cards-container {
 					.uk-slider {
 						.uk-position-relative {
 							ul.uk-slider-items {
+								margin-left: -15px;
+
 								li {
 									@include height(222);
+
+									@include set(991) {
+										width: 50%;
+									}
+
+									@include set(460) {
+										width: 100%;
+										height: 25rem;
+									}
 
 									.ss-card {
 										height: inherit;
@@ -194,7 +221,7 @@ main {
 												rgba(0, 131, 253, 0.7) 0%,
 												rgba(0, 131, 253, 0.4) 100%
 											);
-											@include padding(0, 0, 20, 20);
+											@include padding(0, 15, 15, 15);
 											box-sizing: border-box;
 											display: flex;
 											align-items: flex-end;
@@ -208,6 +235,11 @@ main {
 												margin: 0;
 												transition: all 0.2s ease-in-out;
 												line-height: 100%;
+												word-wrap: break-word;
+
+												@include set(460) {
+													font-size: 2.5rem;
+												}
 											}
 
 											&:hover {
@@ -215,7 +247,9 @@ main {
 												h3 {
 													// color: $secondary;
 													padding-bottom: 0.3rem;
-													border-bottom: 0.2rem dashed $secondary;
+													border-bottom: 0.2rem dashed;
+													border-image-slice: 1;
+
 													background: linear-gradient(
 														270deg,
 														$secondary 10%,
@@ -223,6 +257,11 @@ main {
 													);
 													-webkit-background-clip: text;
 													-webkit-text-fill-color: transparent;
+													border-image-source: linear-gradient(
+														270deg,
+														$secondary 10%,
+														$yellow 90%
+													);
 												}
 											}
 										}
@@ -275,12 +314,25 @@ main {
 							left: 0;
 							background-color: $secondary;
 						}
+
+						@include set(460) {
+							font-size: 3rem;
+						}
 					}
 				}
 				.ss-cards-container {
 					.uk-grid {
 						.ss-card-contain {
 							@include margin(0, 0, 36, 0);
+
+							@include set(991) {
+								width: 50%;
+							}
+
+							@include set(460) {
+								width: 100%;
+								margin-bottom: 3rem;
+							}
 
 							.ss-card {
 								@include margin(0, 0, 22, 0);
@@ -301,6 +353,12 @@ main {
 								overflow: hidden;
 								transition: all 0.2s ease-in-out;
 
+								@include set(460) {
+									height: 25rem;
+									margin-bottom: 1.2rem;
+									@include padding(23, 23, 23, 23);
+								}
+
 								.ss-img-overlay {
 									position: absolute;
 									top: 0;
@@ -320,6 +378,12 @@ main {
 										@include height(70);
 										border-radius: #{toRem(15)}rem;
 										@include margin(0, 0, 10, 0);
+
+										@include set(460) {
+											@include width(90);
+											@include height(90);
+											@include margin(0, 0, 20, 0);
+										}
 
 										img {
 											width: 100%;
@@ -342,6 +406,15 @@ main {
 											margin: 0;
 											width: 100%;
 											// width: 93%;
+
+											@include set(991) {
+												@include font-size(24);
+											}
+
+											@include set(460) {
+												@include font-size(38);
+												line-height: 100%;
+											}
 										}
 										.ss-product-price {
 											@include font-size(14);
@@ -354,12 +427,9 @@ main {
 											justify-content: center;
 											align-items: center;
 											height: fit-content;
-
 											margin-top: 0.5rem;
 											border-bottom: 1px dashed $secondary;
-
 											background: rgb(0, 131, 253);
-
 											background: -webkit-linear-gradient(
 												180deg,
 												rgba(255, 160, 0, 1) 10%,
@@ -367,6 +437,15 @@ main {
 											);
 											-webkit-background-clip: text;
 											-webkit-text-fill-color: transparent;
+
+											@include set(991) {
+												@include font-size(18);
+											}
+
+											@include set(460) {
+												@include font-size(26);
+												line-height: 100%;
+											}
 										}
 									}
 								}
@@ -404,6 +483,11 @@ main {
 									box-shadow: 0px 4px 6px 0px rgba($secondary, 0.2);
 									border-radius: #{toRem(5.95)}rem;
 									transition: all 0.2s ease-in-out;
+
+									@include set(460) {
+										@include font-size(24);
+										@include padding(17, 15, 17, 15);
+									}
 
 									&:hover {
 										box-shadow: none;

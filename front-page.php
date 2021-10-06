@@ -15,7 +15,7 @@ get_header();
                     ?>
                         <li>
                             <div class="ss-bg-overlay"></div>
-                            <img src="wp-content/themes/sochyo-theme/img/landing-9.jpg" alt="">
+                            <img src="wp-content/themes/sochyo-theme/img/landing-10.jpg" alt="">
 
                             <!-- <video autoplay muted loop id="myVideo" width="100%" height="100%">
                                 <source src="wp-content/themes/sochyo-theme/img/vid5.mp4" type="video/mp4">
