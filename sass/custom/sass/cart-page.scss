@@ -179,6 +179,7 @@
 
 form.checkout.woocommerce-checkout {
 	display: flex;
+	flex-wrap: inherit;
 
 	@include set(991) {
 		flex-direction: column;
@@ -197,6 +198,11 @@ form.checkout.woocommerce-checkout {
 form.checkout.woocommerce-checkout .col2-set {
 	display: flex;
 	flex-direction: column;
+	width: 50%;
+
+	@include set(991) {
+		width: 100%;
+	}
 }
 
 .woocommerce .col2-set .col-1,
@@ -269,4 +275,30 @@ form.checkout.woocommerce-checkout .col2-set {
 
 .woocommerce-order-received.page main article .entry-content .woocommerce {
 	justify-content: center;
+}
+
+.woocommerce-additional-fields {
+	@include set(768) {
+		margin: 3rem 0;
+
+		h3 {
+			margin: 0;
+		}
+	}
+}
+
+.woocommerce-checkout-review-order {
+	width: 50%;
+
+	@include set(991) {
+		width: 100%;
+	}
+
+	@include set(991) {
+		width: 100%;
+	}
+}
+
+.woocommerce-NoticeGroup.woocommerce-NoticeGroup-checkout {
+	width: 100%;
 }
