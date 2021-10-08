@@ -57,6 +57,11 @@
 						padding-right: 2rem;
 						box-sizing: border-box;
 
+						@include set(555) {
+							width: 100%;
+							padding-right: 0;
+						}
+
 						.shop_table {
 							thead {
 								tr {
@@ -107,6 +112,10 @@
 					.cart-collaterals {
 						width: 30%;
 
+						@include set(555) {
+							width: 100%;
+						}
+
 						&::before {
 							display: none;
 						}
@@ -119,7 +128,11 @@
 
 							.wc-proceed-to-checkout {
 								a.checkout-button {
-									background-color: $secondary;
+									background: linear-gradient(
+										270deg,
+										$secondary 10%,
+										$yellow 90%
+									);
 									padding: 0.8rem;
 								}
 							}
@@ -166,6 +179,19 @@
 
 form.checkout.woocommerce-checkout {
 	display: flex;
+
+	@include set(991) {
+		flex-direction: column;
+	}
+
+	h3 {
+		font-weight: 700;
+		@include font-size(32);
+
+		@include set(555) {
+			@include font-size(40);
+		}
+	}
 }
 
 form.checkout.woocommerce-checkout .col2-set {
@@ -179,6 +205,10 @@ form.checkout.woocommerce-checkout .col2-set {
 	width: 100%;
 	padding-right: 2rem;
 	box-sizing: border-box;
+
+	@include set(991) {
+		padding-right: 0rem;
+	}
 }
 
 #add_payment_method #payment ul.payment_methods li,
@@ -227,6 +257,10 @@ form.checkout.woocommerce-checkout .col2-set {
 	width: 100%;
 	padding-right: 2rem;
 	box-sizing: border-box;
+
+	@include set(991) {
+		padding-right: 0rem;
+	}
 }
 
 .woocommerce form .form-row textarea {

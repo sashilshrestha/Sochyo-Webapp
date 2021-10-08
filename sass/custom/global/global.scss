@@ -132,6 +132,10 @@ body {
 	border: none !important;
 	box-shadow: 0px 5px 20px #00000029 !important;
 
+	@include set(768) {
+		padding: 3rem !important;
+	}
+
 	input {
 		border-radius: 0.625rem;
 		background-color: #328bdb0f;
@@ -156,7 +160,7 @@ body {
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-	background-color: $secondary;
+	background: linear-gradient(270deg, #ffa000 10%, #f3cf06 90%);
 }
 
 .woocommerce #respond input#submit.alt:hover,
@@ -310,5 +314,10 @@ body .woocommerce-message {
 		display: flex;
 		flex-direction: row-reverse;
 		align-items: center;
+		flex-direction: column;
+
+		&:before {
+			display: none;
+		}
 	}
 }
