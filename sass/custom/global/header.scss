@@ -200,9 +200,10 @@ header.ss-navbar {
 		.ss-right {
 			display: none;
 			@include set(992) {
-				display: block;
+				display: flex;
 				float: right;
 				padding-right: 3.5rem;
+				align-items: center;
 
 				@include set(460) {
 					padding-right: 2rem;
@@ -261,7 +262,7 @@ header.ss-navbar {
 	header.ss-navbar {
 		.uk-container {
 			.ss-right {
-				display: block;
+				display: flex;
 
 				.fr-burger {
 					justify-content: center;
@@ -322,4 +323,38 @@ header.ss-navbar {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
+}
+
+// Mobile View Icons
+.ss-right {
+	.wpmenucart-contents {
+		color: white;
+		@include font-size(16);
+		position: relative;
+		transition: all 0.3s ease-in-out;
+		font-weight: 500;
+		text-transform: uppercase;
+		@include margin(0, 86, 0, 0);
+		@include padding(0, 0, 3, 0);
+		position: relative;
+
+		.cartcontents {
+			width: max-content;
+			background-color: transparent;
+			color: #fff;
+			font-size: 0px;
+			position: absolute;
+			@include padding(2, 5, 2, 5);
+			border-radius: #{toRem(4)}rem;
+			visibility: hidden;
+
+			@include set(768) {
+				font-size: 1rem !important;
+			}
+		}
+
+		@include set(768) {
+			font-size: 2rem;
+		}
+	}
 }

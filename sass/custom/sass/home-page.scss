@@ -217,9 +217,9 @@ main {
 											width: 100%;
 											background: rgb(0, 131, 253);
 											background: linear-gradient(
-												90deg,
-												rgba(0, 131, 253, 0.7) 0%,
-												rgba(0, 131, 253, 0.4) 100%
+												360deg,
+												rgba(0, 131, 253, 0.8) 0%,
+												rgba($yellow, 0.2) 100%
 											);
 											@include padding(0, 15, 15, 15);
 											box-sizing: border-box;
@@ -243,7 +243,7 @@ main {
 											}
 
 											&:hover {
-												backdrop-filter: grayscale(10) blur(1px);
+												backdrop-filter: grayscale(100) blur(3px);
 												h3 {
 													// color: $secondary;
 													padding-bottom: 0.3rem;
@@ -335,7 +335,7 @@ main {
 							}
 
 							.ss-card {
-								@include margin(0, 0, 22, 0);
+								@include margin(0, 0, 8, 0);
 								background: rgb(0, 0, 0);
 								background: linear-gradient(
 									0deg,
@@ -470,10 +470,13 @@ main {
 
 							.ss-button {
 								a {
+									display: block;
+									width: auto;
+									text-align: center;
 									background: linear-gradient(
 										270deg,
-										$secondary 10%,
-										$yellow 90%
+										rgba($yellow, 0.75) 0%,
+										rgba($secondary, 1) 100%
 									);
 									// background-color: $secondary;
 									color: $white;
@@ -481,7 +484,7 @@ main {
 									@include font-size(17);
 									font-weight: 700;
 									box-shadow: 0px 4px 6px 0px rgba($secondary, 0.2);
-									border-radius: #{toRem(5.95)}rem;
+									border-radius: #{toRem(10)}rem;
 									transition: all 0.2s ease-in-out;
 
 									@include set(460) {

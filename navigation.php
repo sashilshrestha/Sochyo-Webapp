@@ -25,6 +25,11 @@
 
 		<!-- It only contains the hamburger -->
 		<div class="ss-right">
+			<!-- <a href="//localhost:3000/Sochyo_Custom/index.php/my-account/" class="menu__item uk-icon" uk-icon="user">.<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<circle fill="none" stroke="#000" stroke-width="1.1" cx="9.9" cy="6.4" r="4.4"></circle>
+					<path fill="none" stroke="#000" stroke-width="1.1" d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"></path>
+				</svg></a>
+			<a class="wpmenucart-contents empty-wpmenucart-visible" href="//localhost:3000/Sochyo_Custom/index.php/shop/" title="Start shopping"><i class="wpmenucart-icon-shopping-cart-0" role="img" aria-label="Cart"></i><span class="cartcontents">0 items</span></a> -->
 			<a class="uk-navbar-toggle fr-burger">
 				<span></span>
 				<span></span>
