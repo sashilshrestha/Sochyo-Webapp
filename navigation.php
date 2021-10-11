@@ -4,7 +4,7 @@
 		<div class="ss-navigation-bar uk-width uk-position-relative">
 			<!-- It should only contain logo -->
 			<div class="ss-logo">
-				<a href="<?php echo get_home_url() ?>" class="custom-logo-link" rel="home" aria-current="page"><img width="159" height="56" src="<?php echo get_home_url(); ?>/wp-content/themes/sochyo-theme/img/logo.png" class="custom-logo" alt="AB Holdings" /></a>
+				<a href="<?php echo get_home_url() ?>" class="custom-logo-link" rel="home" aria-current="page"><img width="159" height="56" src="<?php echo get_home_url(); ?>/wp-content/themes/sochyo-theme/img/logo-demo.png" class="custom-logo" alt="Sochyo" /></a>
 			</div>
 
 			<!-- Navigation elemet must go here -->

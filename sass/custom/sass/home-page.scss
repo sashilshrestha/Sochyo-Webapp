@@ -7,10 +7,10 @@ main {
 				.uk-position-relative {
 					ul.uk-slider-items {
 						li {
-							height: 100vh;
+							height: calc(100vh + 6.25rem);
 
-							@include set(460) {
-								height: 60vh;
+							@include set(460) {								
+								height: calc(60vh + 6.25rem);
 							}
 
 							.ss-bg-overlay {
@@ -272,6 +272,7 @@ main {
 						ul.uk-slider-nav {
 							@include margin(40, 0, 0, 0);
 							li {
+								@include padding(0, 0, 0, 15);
 								a {
 									@include width(20);
 									@include height(20);
@@ -333,8 +334,10 @@ main {
 								width: 100%;
 								margin-bottom: 4rem;
 							}
+							pointer-events: none;
 
 							.ss-card {
+								pointer-events: auto;
 								@include margin(0, 0, 8, 0);
 								background: rgb(0, 0, 0);
 								background: linear-gradient(
@@ -469,6 +472,7 @@ main {
 							}
 
 							.ss-button {
+								pointer-events: auto;
 								a {
 									display: block;
 									width: auto;
@@ -494,6 +498,7 @@ main {
 
 									&:hover {
 										box-shadow: none;
+										transform: translateY(-0.2rem);
 									}
 
 									&.ss-details-btn {
@@ -502,6 +507,24 @@ main {
 
 										&:hover {
 											box-shadow: none;
+										}
+									}
+								}
+							}
+							&:hover {
+								.ss-card {
+									img {
+										transform: scale(0.9);
+									}
+									.ss-img-overlay {
+										transform: scale(1.12);
+										filter: blur(2px);
+									}
+									.ss-card-info {
+										.ss-content-holder {
+											h5 {
+												color: $secondary;
+											}
 										}
 									}
 								}

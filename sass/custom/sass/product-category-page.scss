@@ -64,11 +64,13 @@
 
 					@include set(460) {
 						width: 100%;
-						margin-bottom: 3rem;
+						margin-bottom: 4rem;
 					}
+					pointer-events: none;
 
 					.ss-card {
-						@include margin(0, 0, 22, 0);
+						pointer-events: auto;
+						@include margin(0, 0, 8, 0);
 						background: rgb(0, 0, 0);
 						background: linear-gradient(
 							0deg,
@@ -202,16 +204,24 @@
 					}
 
 					.ss-button {
+						pointer-events: auto;
 						a {
-							background: linear-gradient(270deg, $secondary 10%, $yellow 90%);
+							display: block;
+							width: auto;
+							text-align: center;
+							background: linear-gradient(
+								270deg,
+								rgba($yellow, 0.75) 0%,
+								rgba($secondary, 1) 100%
+							);
 							// background-color: $secondary;
 							color: $white;
 							@include padding(12, 10, 12, 10);
 							@include font-size(17);
 							font-weight: 700;
 							box-shadow: 0px 4px 6px 0px rgba($secondary, 0.2);
-							border-radius: #{toRem(5.95)}rem;
-							transition: all 0.2s ease-in-out;
+							border-radius: #{toRem(10)}rem;
+							// transition: all 0.2s ease-in-out;
 
 							@include set(460) {
 								@include font-size(24);
@@ -220,6 +230,7 @@
 
 							&:hover {
 								box-shadow: none;
+								transform: translateY(-0.2rem);
 							}
 
 							&.ss-details-btn {
@@ -228,6 +239,24 @@
 
 								&:hover {
 									box-shadow: none;
+								}
+							}
+						}
+					}
+					&:hover {
+						.ss-card {
+							img {
+								transform: scale(0.9);
+							}
+							.ss-img-overlay {
+								transform: scale(1.12);
+								filter: blur(2px);
+							}
+							.ss-card-info {
+								.ss-content-holder {
+									h5 {
+										color: $secondary;
+									}
 								}
 							}
 						}

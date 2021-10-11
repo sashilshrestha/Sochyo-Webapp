@@ -24,15 +24,15 @@ defined('ABSPATH') || exit;
 			<div>
 				<div class="container left">
 					<div class="ss-logo">
-						<img src="<?php echo get_home_url(); ?>/wp-content/themes/sochyo-theme/img/logo.png" alt="">
+						<img src="<?php echo get_home_url(); ?>/wp-content/themes/sochyo-theme/img/logo-demo.png" alt="">
 					</div>
 					<div class="ss-info">
 						<p><span uk-icon="location"></span>
-							New Baneshwor, Kathmandu Nepal</p>
+							Ratnanagar-3, Tandi Jhawani,</p>
 						<p><span uk-icon="phone"></span>
 							+977-984140545</p>
 						<p><span uk-icon="mail"></span>
-							sochyo@gmail.com</p>
+							sochyo.np@gmail.com</p>
 					</div>
 				</div>
 			</div>
@@ -40,9 +40,9 @@ defined('ABSPATH') || exit;
 				<div class="container middle">
 					<h3>Pay Via</h3>
 					<div class="ss-ewallet">
-						<img src="./wp-content/themes/sochyo-theme/img/khalti.png" alt="">
-						<img src="./wp-content/themes/sochyo-theme/img/ime.jfif" alt="">
-						<img src="./wp-content/themes/sochyo-theme/img/esewa.jpg" alt="">
+						<img src="<?php echo get_home_url(); ?>/wp-content/themes/sochyo-theme/img/khalti.png" alt="">
+						<img src="<?php echo get_home_url(); ?>/wp-content/themes/sochyo-theme/img/ime.jfif" alt="">
+						<img src="<?php echo get_home_url(); ?>/wp-content/themes/sochyo-theme/img/esewa.jpg" alt="">
 					</div>
 				</div>
 			</div>
@@ -61,7 +61,7 @@ defined('ABSPATH') || exit;
 	<div class="uk-container uk-container-large ss-footer-bottom">
 		<div class="ss-left">© All rights reserved.
 		</div>
-		<div class="ss-right">Development with love by: Sashil</div>
+		<!-- <div class="ss-right">Development with love by: Sashil</div> -->
 
 	</div>
 </footer>

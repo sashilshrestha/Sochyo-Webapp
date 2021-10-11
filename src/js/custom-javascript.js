@@ -27,7 +27,7 @@
 		if (item !== "0 items0 items") {
 			$(".cartcontents").css({
 				visibility: "visible",
-				"font-size": "0.5rem",
+				"font-size": ".8rem",
 				background: "linear-gradient(270deg,#ffa000 10%,#f3cf06 90%)",
 				"font-weight": "700",
 			});

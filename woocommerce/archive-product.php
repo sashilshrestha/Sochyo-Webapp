@@ -91,8 +91,11 @@ if (woocommerce_product_loop()) {
 						</div>
 					</div>
 					<div class="ss-button">
-						<a href="?add-to-cart=<?php echo $post->ID; ?>">Add to Cart</a>
-						<a href="<?php the_permalink(); ?>" class="ss-details-btn">View Details</a>
+						<!-- <a href="?add-to-cart=<?php //echo $post->ID; 
+													?>">Add to Cart</a>
+						<a href="<?php //the_permalink(); 
+									?>" class="ss-details-btn">View Details</a> -->
+						<a href="<?php the_permalink(); ?>">View Details</a>
 					</div>
 				</div>
 		<?php

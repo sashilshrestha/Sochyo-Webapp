@@ -11,12 +11,14 @@ get_header();
             <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
                 <ul class="uk-slider-items uk-child-width-1-1 uk-grid">
                     <?php
+                    $thumb_id = get_post_thumbnail_id();
+                    $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+
                     for ($i = 1; $i < 2; $i++) {
                     ?>
                         <li>
                             <div class="ss-bg-overlay"></div>
-                            <img src="wp-content/themes/sochyo-theme/img/landing-10.jpg" alt="">
-
+                            <img src="<?php echo $thumb_url[0]; ?>" alt="">
                             <!-- <video autoplay muted loop id="myVideo" width="100%" height="100%">
                                 <source src="wp-content/themes/sochyo-theme/img/vid5.mp4" type="video/mp4">
                             </video> -->
@@ -46,7 +48,7 @@ get_header();
                 <h2>Popular Category</h2>
             </div>
             <div class="ss-cards-container">
-                <div uk-slider="finite: true; pause-on-hover: true">
+                <div uk-slider="finite: true; pause-on-hover: true; autoplay: true; autoplay-interval: 3000">
                     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
                         <?php
                         $taxonomy = 'product_cat';
@@ -136,8 +138,8 @@ get_header();
                             </div>
                     <?php
                         }
-                        endwhile;
-                        wp_reset_query();
+                    endwhile;
+                    wp_reset_query();
                     ?>
                 </div>
             </div>
