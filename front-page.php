@@ -7,36 +7,45 @@ get_header();
 ?>
 <main>
     <section class="ss-landing-section">
-        <div uk-slider>
+        <div uk-slider="autoplay: true; finite: true;">
             <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
                 <ul class="uk-slider-items uk-child-width-1-1 uk-grid">
                     <?php
                     $thumb_id = get_post_thumbnail_id();
                     $thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
 
-                    for ($i = 1; $i < 2; $i++) {
+                    for ($i = 1; $i < 5; $i++) {
+                        $image_url = get_field('landing_image_'.$i.'');
+                        if($image_url){
                     ?>
                         <li>
                             <div class="ss-bg-overlay"></div>
-                            <img src="<?php echo $thumb_url[0]; ?>" alt="">
+                            <img src="<?php echo $image_url; ?>" alt="">
                             <!-- <video autoplay muted loop id="myVideo" width="100%" height="100%">
                                 <source src="wp-content/themes/sochyo-theme/img/vid5.mp4" type="video/mp4">
                             </video> -->
                             <div class="ss-landing-info uk-panel">
-                                <div class="uk-container uk-container-large">
+                                <!-- <div class="uk-container uk-container-large">
                                     <?php the_content(); ?>
                                     <a class="ss-button" href="<?php echo get_home_url() ?>/<?php echo get_field('cta_button'); ?>">SHOP NOW</a>
-                                </div>
+                                </div> -->
                             </div>
                         </li>
                     <?php
+                        }
                     }
                     ?>
                 </ul>
-                <a class="" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                <a class="" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                <!-- <a class="" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                <a class="" href="#" uk-slidenav-next uk-slider-item="next"></a> -->
+
+                <div class="uk-container uk-container-large main-content">
+                    <?php the_content(); ?>
+                    <a class="ss-button" href="<?php echo get_home_url() ?>/<?php echo get_field('cta_button'); ?>">SHOP NOW</a>
+                </div>
             </div>
             <ul class="uk-slider-nav uk-dotnav uk-flex-center"></ul>
+
         </div>
 
     </section>

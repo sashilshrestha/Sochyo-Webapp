@@ -7,10 +7,10 @@ main {
 				.uk-position-relative {
 					ul.uk-slider-items {
 						li {
-							height: calc(100vh + 6.25rem);
+							height: calc(100vh + 5.25rem);
 
-							@include set(460) {								
-								height: calc(60vh + 6.25rem);
+							@include set(460) {
+								height: calc(60vh + 5.25rem);
 							}
 
 							.ss-bg-overlay {
@@ -38,69 +38,69 @@ main {
 								max-width: 100%;
 								box-sizing: border-box;
 
-								.uk-container {
-									h1 {
-										@include font-size(101);
-										@include line-height(101);
-										@include width(835);
-										font-weight: 900;
-										@include margin(0, 0, 20, 0);
+								// .uk-container {
+								// 	h1 {
+								// 		@include font-size(101);
+								// 		@include line-height(101);
+								// 		@include width(835);
+								// 		font-weight: 900;
+								// 		@include margin(0, 0, 20, 0);
 
-										@include set(768) {
-											width: 100%;
-										}
-										@include set(555) {
-											font-size: 5.3125rem;
-										}
-										@include set(460) {
-											font-size: 4.2rem;
-											line-height: 105%;
-										}
+								// 		@include set(768) {
+								// 			width: 100%;
+								// 		}
+								// 		@include set(555) {
+								// 			font-size: 5.3125rem;
+								// 		}
+								// 		@include set(460) {
+								// 			font-size: 4.2rem;
+								// 			line-height: 105%;
+								// 		}
 
-										span {
-											background: linear-gradient(
-												270deg,
-												$secondary 10%,
-												$yellow 90%
-											);
-											-webkit-background-clip: text;
-											-webkit-text-fill-color: transparent;
-										}
-									}
-									a.ss-button {
-										position: absolute;
-										@include font-size(23);
-										@include line-height(23);
-										@include padding(18, 32, 18, 32);
-										background: linear-gradient(
-											270deg,
-											$secondary 10%,
-											$yellow 90%
-										);
-										border-radius: #{toRem(8)}rem;
-										box-shadow: 0px 5px 13px 0px rgba(255, 160, 0, 0.5);
-										transition: all 0.2s ease-in-out;
-										font-weight: 800;
+								// 		span {
+								// 			background: linear-gradient(
+								// 				270deg,
+								// 				$secondary 10%,
+								// 				$yellow 90%
+								// 			);
+								// 			-webkit-background-clip: text;
+								// 			-webkit-text-fill-color: transparent;
+								// 		}
+								// 	}
+								// 	a.ss-button {
+								// 		position: absolute;
+								// 		@include font-size(23);
+								// 		@include line-height(23);
+								// 		@include padding(18, 32, 18, 32);
+								// 		background: linear-gradient(
+								// 			270deg,
+								// 			$secondary 10%,
+								// 			$yellow 90%
+								// 		);
+								// 		border-radius: #{toRem(8)}rem;
+								// 		box-shadow: 0px 5px 13px 0px rgba(255, 160, 0, 0.5);
+								// 		transition: all 0.2s ease-in-out;
+								// 		font-weight: 800;
 
-										&:hover {
-											transform: translateY(-0.3125rem);
-											text-decoration: none;
-											box-shadow: none;
-										}
+								// 		&:hover {
+								// 			transform: translateY(-0.3125rem);
+								// 			text-decoration: none;
+								// 			box-shadow: none;
+								// 		}
 
-										&:focus {
-											outline: none;
-										}
-									}
+								// 		&:focus {
+								// 			outline: none;
+								// 		}
+								// 	}
 
-									@include set(768) {
-										width: 82%;
-									}
+								// 	@include set(768) {
+								// 		width: 82%;
+								// 	}
 
-									@include set(460) {
-										width: 78%;
-									}
-								}
+								// 	@include set(460) {
+								// 		width: 78%;
+								// 	}
+								// }
 							}
 						}
 					}
@@ -129,6 +129,78 @@ main {
 							transform: scale(1.2);
 						}
 					}
+					.main-content {
+						position: absolute;
+						top: 50%;
+						left: #{toRem(200)}rem;
+						transform: translateY(-50%);
+
+						@include set(1100) {
+							left: 7.5rem;
+						}
+
+						@include set(991) {
+							left: 0;
+						}
+
+						h1 {
+							@include font-size(101);
+							@include line-height(101);
+							@include width(835);
+							font-weight: 900;
+							@include margin(0, 0, 20, 0);
+
+							@include set(768) {
+								width: 100%;
+							}
+							@include set(555) {
+								font-size: 5.3125rem;
+							}
+							@include set(460) {
+								font-size: 4.2rem;
+								line-height: 105%;
+							}
+
+							span {
+								background: linear-gradient(
+									270deg,
+									$secondary 10%,
+									$yellow 90%
+								);
+								-webkit-background-clip: text;
+								-webkit-text-fill-color: transparent;
+							}
+						}
+						a.ss-button {
+							position: absolute;
+							@include font-size(23);
+							@include line-height(23);
+							@include padding(18, 32, 18, 32);
+							background: linear-gradient(270deg, $secondary 10%, $yellow 90%);
+							border-radius: #{toRem(8)}rem;
+							box-shadow: 0px 5px 13px 0px rgba(255, 160, 0, 0.5);
+							transition: all 0.2s ease-in-out;
+							font-weight: 800;
+
+							&:hover {
+								transform: translateY(-0.3125rem);
+								text-decoration: none;
+								box-shadow: none;
+							}
+
+							&:focus {
+								outline: none;
+							}
+						}
+
+						@include set(768) {
+							width: 100%;
+						}
+
+						@include set(460) {
+							width: 85%;
+						}
+					}
 				}
 
 				ul.uk-slider-nav {
@@ -136,11 +208,25 @@ main {
 					position: absolute;
 					bottom: #{toRem(35)}rem;
 					left: #{toRem(260)}rem;
+
+					@include set(1024) {
+						left: 12.25rem;
+					}
+					@include set(991) {
+						left: 3rem;
+					}
+
 					li {
+						@include padding(0, 16, 0, 0);
 						a {
 							@include width(20);
 							@include height(20);
 							border-color: $white;
+
+							@include set(555) {
+								@include width(24);
+								@include height(24);
+							}
 						}
 
 						&.uk-active {
