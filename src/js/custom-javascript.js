@@ -23,7 +23,8 @@
 
 	$(document).ready(function () {
 		let item = $(".cartcontents").text();
-		if (item !== "0 items") {
+		// console.log(item);
+		if (item !== "0 items0 items") {
 			$(".cartcontents").css({
 				visibility: "visible",
 				"font-size": "0.5rem",

@@ -22,8 +22,8 @@ get_header();
                             </video> -->
                             <div class="ss-landing-info uk-panel">
                                 <div class="uk-container uk-container-large">
-                                    <h1>Not Just a Sale It’s Much <span>Bigger !</span></h1>
-                                    <a class="ss-button" href="">SHOP NOW</a>
+                                    <?php the_content(); ?>
+                                    <a class="ss-button" href="<?php echo get_home_url() ?>/<?php echo get_field('cta_button'); ?>">SHOP NOW</a>
                                 </div>
                             </div>
                         </li>
@@ -108,33 +108,36 @@ get_header();
                         // foreach ($product_category as $cat) :
                         //     echo $cat->name;
                         // endforeach;
+                        $toggle =  get_field('feature_product');
+                        if ($toggle == 1) {
                     ?>
-                        <div class="ss-card-contain">
-                            <div class="ss-card">
-                                <img src="<?php echo $thumb_url[0] ?>" alt="" class="ss-img-overlay">
-                                <div class="ss-card-info">
-                                    <div class="ss-img-holder">
-                                        <img src="<?php echo get_field('product_thumbnail') ?>" alt="">
-                                    </div>
-                                    <div class="ss-content-holder">
-                                        <a href="<?php the_permalink(); ?>">
-                                            <h5><?php the_title(); ?></h5>
-                                        </a>
-                                        <a href="" class="ss-product-price"><?php echo $regularprice; ?></a>
+                            <div class="ss-card-contain">
+                                <div class="ss-card">
+                                    <img src="<?php echo $thumb_url[0] ?>" alt="" class="ss-img-overlay">
+                                    <div class="ss-card-info">
+                                        <div class="ss-img-holder">
+                                            <img src="<?php echo get_field('product_thumbnail') ?>" alt="">
+                                        </div>
+                                        <div class="ss-content-holder">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <h5><?php the_title(); ?></h5>
+                                            </a>
+                                            <a href="" class="ss-product-price"><?php echo $regularprice; ?></a>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="ss-button">
+                                    <!-- <a href="?add-to-cart=<?php //echo $post->ID; 
+                                                                ?>">Add to Cart</a> -->
+                                    <!-- <a href="<?php //the_permalink(); 
+                                                    ?>" class="ss-details-btn">View Details</a> -->
+                                    <a href="<?php the_permalink(); ?>">View Details</a>
+                                </div>
                             </div>
-                            <div class="ss-button">
-                                <!-- <a href="?add-to-cart=<?php //echo $post->ID; 
-                                                            ?>">Add to Cart</a> -->
-                                <!-- <a href="<?php //the_permalink(); 
-                                                ?>" class="ss-details-btn">View Details</a> -->
-                                <a href="<?php the_permalink(); ?>">View Details</a>
-                            </div>
-                        </div>
                     <?php
-                    endwhile;
-                    wp_reset_query();
+                        }
+                        endwhile;
+                        wp_reset_query();
                     ?>
                 </div>
             </div>

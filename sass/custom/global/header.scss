@@ -210,10 +210,10 @@ header.ss-navbar {
 				}
 
 				.fr-burger {
-					min-height: #{toRem(32)}rem;
+					min-height: 1.5rem;
 
-					@include height(26);
-					@include width(40);
+					// @include height(26);
+					@include width(48);
 					padding: 0;
 					flex-direction: column;
 					justify-content: space-between;
@@ -221,7 +221,8 @@ header.ss-navbar {
 
 					@include set(555) {
 						justify-content: space-evenly;
-						height: 3.2rem;
+						min-height: 2.8rem;
+						width: 4rem;
 					}
 
 					span {
@@ -268,12 +269,12 @@ header.ss-navbar {
 					justify-content: center;
 					span {
 						&:first-child {
-							top: #{toRem(3)}rem;
+							top: #{toRem(5)}rem;
 							transform: rotate(45deg);
 							position: relative;
 
 							@include set(555) {
-								top: 0;
+								// top: 0;
 							}
 						}
 						&:nth-child(2) {
@@ -281,7 +282,7 @@ header.ss-navbar {
 						}
 						&:last-child {
 							width: 100%;
-							bottom: 16%;
+							bottom: #{toRem(3)}rem;
 							transform: rotate(-45deg);
 							position: relative;
 						}
@@ -327,34 +328,54 @@ header.ss-navbar {
 
 // Mobile View Icons
 .ss-right {
-	.wpmenucart-contents {
-		color: white;
-		@include font-size(16);
-		position: relative;
-		transition: all 0.3s ease-in-out;
-		font-weight: 500;
-		text-transform: uppercase;
-		@include margin(0, 86, 0, 0);
-		@include padding(0, 0, 3, 0);
-		position: relative;
+	a {
+		margin-left: 1.2rem !important;
 
-		.cartcontents {
-			width: max-content;
-			background-color: transparent;
-			color: #fff;
-			font-size: 0px;
-			position: absolute;
-			@include padding(2, 5, 2, 5);
-			border-radius: #{toRem(4)}rem;
-			visibility: hidden;
+		@include set(555) {
+			margin-left: 2rem !important;
+		}
 
-			@include set(768) {
-				font-size: 1rem !important;
+		&.uk-icon {
+			svg {
+				color: white;
+				width: 2.9rem;
+
+				@include set(555) {
+					width: 4.2rem;
+				}
 			}
 		}
 
-		@include set(768) {
-			font-size: 2rem;
+		&.wpmenucart-contents {
+			color: white;
+			@include font-size(30);
+			position: relative;
+			transition: all 0.3s ease-in-out;
+			font-weight: 500;
+			text-transform: uppercase;
+			@include margin(0, 0, 0, 0);
+			position: relative;
+
+			.cartcontents {
+				display: none;
+
+				width: max-content;
+				background-color: transparent;
+				color: #fff;
+				font-size: 3rem;
+				position: absolute;
+				@include padding(2, 5, 2, 5);
+				border-radius: #{toRem(4)}rem;
+				visibility: hidden;
+
+				@include set(768) {
+					font-size: 1rem !important;
+				}
+			}
+
+			@include set(768) {
+				font-size: 2rem;
+			}
 		}
 	}
 }

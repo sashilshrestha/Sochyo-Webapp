@@ -185,3 +185,14 @@ function bbloomer_save_name_fields($customer_id)
 		update_user_meta($customer_id, 'billing_phone', sanitize_text_field($_POST['billing_phone']));
 	}
 }
+
+// Menus Custom URL link
+
+function wpd_nav_menu_link_atts($atts, $item, $args, $depth)
+{
+	if ('/' == substr($atts['href'], 0, 1)) {
+		$atts['href'] = 'http://localhost:3000/Sochyo_Custom' . $atts['href'];
+	}
+	return $atts;
+}
+add_filter('nav_menu_link_attributes', 'wpd_nav_menu_link_atts', 20, 4);
