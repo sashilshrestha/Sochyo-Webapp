@@ -23,8 +23,8 @@
 
 	$(document).ready(function () {
 		let item = $(".cartcontents").text();
-		// console.log(item);
-		if (item !== "0") {
+		// alert(item);
+		if (item !== "00 items") {
 			$(".cartcontents").css({
 				visibility: "visible",
 				"font-size": ".8rem",

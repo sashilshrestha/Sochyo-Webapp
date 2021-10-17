@@ -7187,9 +7187,9 @@
 
   $(window).resize(resize).trigger("resize");
   $(document).ready(function () {
-    let item = $(".cartcontents").text(); // console.log(item);
+    let item = $(".cartcontents").text(); // alert(item);
 
-    if (item !== "0") {
+    if (item !== "00 items") {
       $(".cartcontents").css({
         visibility: "visible",
         "font-size": ".8rem",

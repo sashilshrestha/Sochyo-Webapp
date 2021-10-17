@@ -90,11 +90,26 @@ add_filter('nav_menu_link_attributes', 'wpse121123_contact_menu_atts', 10, 3);
 function wpse121123_contact_menu_atts($atts, $item, $args)
 {
 	// The ID of the target menu item
-	$menu_target = 78;
+	$menu_target = 151;
 
 	// inspect $item
 	if ($item->ID == $menu_target) {
 		$atts['uk-icon'] = 'user';
+	}
+	return $atts;
+}
+
+// For the Logout Icon in menu jugad
+
+add_filter('nav_menu_link_attributes', 'wpse121123_contact_menu_atts_2', 10, 3);
+function wpse121123_contact_menu_atts_2($atts, $item, $args)
+{
+	// The ID of the target menu item
+	$menu_target = 149;
+
+	// inspect $item
+	if ($item->ID == $menu_target) {
+		$atts['uk-icon'] = 'sign-out';
 	}
 	return $atts;
 }

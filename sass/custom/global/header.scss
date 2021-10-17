@@ -22,6 +22,9 @@ header.ss-navbar {
 
 				li {
 					list-style-type: none;
+					display: flex;
+					align-items: center;
+
 					@include set(992) {
 						@include margin(15, 0, 15, 0);
 						text-align: left;
@@ -132,9 +135,38 @@ header.ss-navbar {
 								}
 							}
 
+							@include set(991) {
+								display: none;
+							}
 							@include set(768) {
 								font-size: 2rem;
 							}
+						}
+					}
+
+					&.account {
+						@include set(991) {
+							display: none;
+						}
+						a {
+							text-decoration: none;
+							background: -webkit-gradient(
+								linear,
+								right top,
+								left top,
+								color-stop(10%, #ffa000),
+								color-stop(90%, #f3cf06)
+							);
+							background: -webkit-linear-gradient(
+								right,
+								#ffa000 10%,
+								#f3cf06 90%
+							);
+							background: -moz-linear-gradient(right, #ffa000 10%, #f3cf06 90%);
+							background: -o-linear-gradient(right, #ffa000 10%, #f3cf06 90%);
+							background: linear-gradient(270deg, #ffa000 10%, #f3cf06 90%);
+							-webkit-background-clip: text;
+							-webkit-text-fill-color: transparent;
 						}
 					}
 				}
@@ -213,7 +245,7 @@ header.ss-navbar {
 					min-height: 1.5rem;
 
 					// @include height(26);
-					@include width(48);
+					@include width(32);
 					padding: 0;
 					flex-direction: column;
 					justify-content: space-between;
@@ -221,8 +253,8 @@ header.ss-navbar {
 
 					@include set(555) {
 						justify-content: space-evenly;
-						min-height: 2.8rem;
-						width: 4rem;
+						min-height: 2.5rem;
+						// width: 4rem;
 					}
 
 					span {
@@ -298,6 +330,13 @@ header.ss-navbar {
 				&.mobile {
 					transition: all 0.4s ease-in-out;
 					transform: translateX(0%);
+					ul {
+						li {
+							// &.wpmenucartli {
+							// 	display: none;
+							// }
+						}
+					}
 				}
 			}
 		}
@@ -376,6 +415,12 @@ header.ss-navbar {
 			@include set(768) {
 				font-size: 2rem;
 			}
+		}
+
+		&.username {
+			width: max-content;
+			color: $white;
+			font-size: 1.5rem;
 		}
 	}
 }
